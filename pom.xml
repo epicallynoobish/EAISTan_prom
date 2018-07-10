@@ -9,7 +9,7 @@
     <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <dependencyManagement>
+    <!-- <dependencyManagement> -->
   	<dependencies>
   		<dependency>
     		<groupId>com.codeborne</groupId>
@@ -41,5 +41,5 @@
   				<version>4.12</version>
   			</dependency>
   		</dependencies>
-  	</dependencyManagement>
+  	<!-- </dependencyManagement> -->
 </project>
