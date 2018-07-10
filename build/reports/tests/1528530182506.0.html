@@ -1,0 +1,895 @@
+<!--?xml version="1.0" encoding="windows-1251" ?--><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"><head>
+        <title>ЕАИСТ 2. Аналитика</title>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+        <meta http-equiv="content-language" content="ru" />
+        <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate" />
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        <link rel="shortcut icon" href="favicon.ico" />
+
+                <link type="text/css" rel="stylesheet" href="static.php/common/css/1528471159/common/forms/windows/templates/154f9ea33fe02bfe7860464e2cfccb11.css" /><script type="text/javascript" src="static.php/common/js/1528471159/jquery-1.4.2.min/ui.core/ui.widget/jquery-ui-1.8.9.custom.min/jquery.placeholder/jquery.timer.min/iscroll/lazyload-min/common/frontend/serialize/ui.droppable/ui.sortable/jquery.disable.text.select/ui.tabs/55bd43b774a5997bbd1444f2f8a2d55d.js"></script><link type="text/css" rel="stylesheet" href="static.php/ui/css/1528471146/ui.progressbar/ui.message/adea5fd865354d9bb88feb9a666cfbda.css" /><script type="text/javascript" src="static.php/ui/js/1528471146/ui.new/ui.timer/ui.columns/ui.tabset/ui.stepper/ui.textbox/ui.range/ui.context/ui.button/ui.popup/ui.group/ui.split/ui.datetimepicker/ui.buttoncombo/ui.choose/ui.combo/ui.combogroup/ui.combolist/ui.list/ui.window/ui.colorpicker/ui.colpanel/ui.progressbar/ui.message/802e03fe61743ef7a76601536dc891fb.js"></script><script type="text/javascript" src="static.php/uitree/js/1528471159/tree.controller/tree.view/tree.model/tree.manager/tree.settings/tree.nested.sort/439f72743d4b435b759cca73559dd10f.js"></script><script type="text/javascript" src="static.php/desktop/js/1528471159/desktop/nsser-matrix/jquery.time-counter/jquery.text-overflow/7b4e45f49c4ec2930bddefa83e926275.js"></script><link type="text/css" rel="stylesheet" href="static.php/olap/css/1528471159/windows/ui.tabs/olap_new/olap_colors/colorpicker/5b947929abad50b99e7646c55dd77b57.css" /><link type="text/css" rel="stylesheet" href="static.php/grid_dev2/css/1528471159/grid/grid_skin/45cae4e082fc0fe841e306a1d4cd13fd.css" /><script type="text/javascript" src="static.php/grid_dev2/js/1528471159/grid.manager/grid.fn/grid.model/grid.view/grid.plugin.expander/grid.plugin.ajax/grid.plugin.sizer/grid.plugin.floatingheaders/grid.plugin.select/grid.plugin.hotkey/grid.plugin.edit/grid.plugin.edit.textnumber/grid.plugin.edit.number/grid.plugin.edit.digital/grid.plugin.edit.integer/grid.plugin.edit.text/grid.plugin.edit.cal/grid.plugin.edit.combo/grid.plugin.builder/grid.plugin.support/f0b9102aec792e3392a84e1fe0bdb3f1.js"></script><link type="text/css" rel="stylesheet" href="src/theme/css/authorization.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/theme/css/style_eaist.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/theme/css/theme_unique_ui.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/ui/css/ui.button.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/ui/skins/light_2011/css/new_ui.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/ui/skins/light_2011/css/toolbar.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/ui/skins/light_2011/css/old_control.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/ui/skins/light_2011/css/img-icons.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/ui/skins/light_2011/css/icomoon.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/ui/skins/light_2011/css/theme_msk_arm2.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/datetimepicker/css/xcal.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/tree/css/tree.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/desktop/css/desktop.css?ver=0001" /><link type="text/css" rel="stylesheet" href="modules/combobox/css/combo.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/detail/css/analyt_detail.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/navi/css/rmg.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/navi/css/jquery.jscrollpane.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/navi/css/navi.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/navi/css/detail2.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/navi/css/report_style.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/navi/css/class_style.css?ver=0001" /><link type="text/css" rel="stylesheet" href="src/navi/css/problem.css?ver=0001" /><script type="text/javascript" src="modules/common/js/jquery/jquery.watch.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/jquery.tooltip.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/qstring.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/ui.stepper.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/ui.draggable.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/windows.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/ui.resizable.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/jquery.keyfilter-1.7.min.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/templates.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/jquery.numbermask.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/jquery.maskedinput-1.2.2.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/jquery.scrollto-1.4.2-min.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/jquery.jscrollpane.js?ver=0001"></script><script type="text/javascript" src="modules/common/js/jquery/jquery.mousewheel.js?ver=0001"></script><script type="text/javascript" src="src/theme/js/msk_2012.js?ver=0001"></script><script type="text/javascript" src="src/theme/js/systemlayout.js?ver=0001"></script><script type="text/javascript" src="src/theme/js/portal.js?ver=0001"></script><script type="text/javascript" src="src/theme/js/moment.js?ver=0001"></script><script type="text/javascript" src="src/theme/js/moment.ru.js?ver=0001"></script><script type="text/javascript" src="src/theme/js/momentinit.js?ver=0001"></script><script type="text/javascript" src="src/theme/js/jquery.maskedinput-1.3.js?ver=0001"></script><script type="text/javascript" src="modules/ui/js/ui.new.windows.js?ver=0001"></script><script type="text/javascript" src="modules/ui/skins/light_2011/js/new_ui.js?ver=0001"></script><script type="text/javascript" src="modules/datetimepicker/js/xcal.js?ver=0001"></script><script type="text/javascript" src="modules/tree/js/tree.js?ver=0001"></script><script type="text/javascript" src="modules/tree/js/tree.ext.js?ver=0001"></script><script type="text/javascript" src="modules/combobox/js/combo.js?ver=0001"></script><script type="text/javascript" src="modules/olap/js/olap.js?ver=0001"></script><script type="text/javascript" src="modules/olap/js/pivot.js?ver=0001"></script><script type="text/javascript" src="modules/olap/js/project.js?ver=0001"></script><script type="text/javascript" src="modules/olap/js/colorpicker.js?ver=0001"></script><script type="text/javascript" src="modules/olap/js/eye.js?ver=0001"></script><script type="text/javascript" src="modules/olap/js/utils.js?ver=0001"></script><script type="text/javascript" src="modules/embed/js/swfobject.js?ver=0001"></script><script type="text/javascript" src="modules/embed/js/embed.js?ver=0001"></script><script type="text/javascript" src="modules/embed/js/clientembed.js?ver=0001"></script><script type="text/javascript" src="modules/embed/js/html5embed.js?ver=0001"></script><script type="text/javascript" src="src/detail/js/analytdetailhelper.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/jquery.mousewheel.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/jquery.jscrollpane.min.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/detail_helper.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/exportlist.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/navi.patches.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/navi.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/eaist.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/subscription.js?ver=0001"></script><script type="text/javascript" src="src/navi/js/httpproxy.js?ver=0001"></script><script type="text/javascript">FE.manageEvent("onload",function(event, target){
+  FE.loadedExtraFiles = "17414l17416l17418l17420l17422l17424l17426l17428l17430l17432l17434l17436l17438l17440l17442l17444l17446l17448l17450l17452l17454l17456l17456l17458l17460l17462l17464l17466l17468l17470l17472l17474l17476l17478l17480l17482l17484l17486l17488l17490l17492l17494l17496l17498l17500l17502l17504l17506l17508l17510l17512l17514l17516l17518l17520l17456l17522l17524l17526l17528l17530l17532l17534l17536l17538l17540l17542l17544l17546l17548l17550l17552l17554l17556l17558l17560l17562l17564l17416l17516l17566l17568l17552l17570l18256l18258l18260l18262l18264l18266l18268l18270l18272l18314l18316l18318l17516l17518l17520l17456l17522l18320l18322l18324l18326l17416l18328l17516l17566l17568l18330l18332l17572l17574l17576l17578l17580l17582l17584l17586l17588l17590l17592l17594l17596l17598l17600l17602l17604l17606l17608l17610l17612l17614l17616l17618l17620l17622l17624l14932l14934l17626l17628l17630l17636l17696l17638l17642l17644l18194l17660l17662l17664l17666l17668l17670l17672l14938l14940l14942l14944l14946l14948l17618l17618l17674l17676";;$("#ui_combo_bodies_all").appendTo("body");;$.browser.browserName = "Chrome"; $.browser.browserVersion = "66.0.3359.181";;$.browser.isIPad = false;;$.browser.isMobile = false;;$.browser.isPhone = false;;applyRound('#newname', '', '#E5E5E5');;navi.panelType = 'panel';; $('.grid-expander').live('click' , function(){  detail.setDashToEmptyCells();  }); ;                $('#subscriptionBtn').css('display','inline-block');                jQuery(function($) {                	$('[id*=\"c_values__item_\"]', '.c_side-menu').click(function(event) {                 	    window.submenuClick = true;                	    return navi.manageReportMenuSelectionEvent(event)                 	});                });                setTimeout( function(){ $('#c_values__item_54').click(); }, 500);;navi.onload('09.06.2018'); ;detail.is_report= 1;
+});
+FE.manageEvent("onresize",function(event, target){
+   UIComboManager.closeAllBodies(); ;
+});
+FE.manageEvent("onafterload",function(event, target){
+  $('#blocks-set').html('');$('.main-left-td').show();(function(){var t = UITreeManager.create("t_print");    t.setSettings({"id":"t_print","synchronizeLabels":{},"notSelectedText":"","decodeNodeName":1,"hasHierarcy":1,"renderAll":1,"initEventCM":{"0":"onafterload","1":"ajaxloadcompleted"},"ajax":0,"label":"Печать","minSearchLen":0,"defaultHeight":"","pathNameSeporator":" / ","colorSearchResults":1,"colorBackground":"#0099CC","colorFont":"#FFFFFF","loadSelNotLoadedNodes":1,"coloring":{},"startWith":0,"maxSelected":1000000000,"waveSelection":0,"sortSingleSelect":0,"orderCondition":"","db":"data","labelFormat":{"n":""},"caseInsensetive":1,"indepNodeVal":-100500,"disableFiltersVal":-100500,"orderSearchResult":"default","searchOnlyFixedNodes":{},"viewHasHierarcy":1});    t.setData([{id:'1',n:'XLSX',hc:0},{id:'2',n:'PDF',hc:0},{id:'3',n:'HTML',hc:0},{id:'4',n:'CSV',hc:0}]);if (t.recalcAllNodes){t.recalcAllNodes()}})();setTimeout("UITreeManager.get(\"t_print\").draw('auto');",0);;(function(){var vv = UITreeManager.get("t_print");    if (vv){    vv.manageEvent("onsetselected", function(id){navi.onPrintClick();}).setNS("default");}})();(new UICombo("c_print", "", 1)).setSettings({"tplName":"t_combo.php","selectedListInline":0,"selectedListPosition":"","direction":"auto","dropOnCaption":1,"bodyHeight":125,"headWidth":32,"bodyWidth":200,"headClass":"","bodyClass":"","maxLabelLength":0,"sizeBodyToHead":0,"autoHeight":0,"bodyFollowHead":0,"contentOffset":4,"preHiddenSearch":0,"resizable":0,"resizeHeaderAuto":0,"resizeMinWidth":200,"resizeMaxWidth":800,"resizeMinHeight":100,"resizeStep":10,"handles":"se","handlesUp":"ne","msIco":"","icoAction":"","getNodeName":1,"getNodeIco":1,"resizeContainer":"body","resizeMaxHeight":800,"resizeHideBody":0,"staticLabel":0,"smartLabel":0,"calcCount":"calcAll","inlineHead":1});(function(){var vv = UIManager.get("c_print");    if (vv){    vv.manageEvent("onOpenBody", function(id){UIManager.get("c_print").$container.addClass("opened");}).manageEvent("onCloseBody", function(id){UIManager.get("c_print").$container.removeClass("opened");}).setNS("default");}})();UIManager.get("c_print").manageEvent("onOpenBody", function(id){$('#dc_print').addClass('cmb-opened'); $('.comboDummy').remove(); cd = $('&lt;div class="comboDummy"&gt;'); cd.width($('#dc_print').width()-2); $('#cmbBody_c_print').append(cd);});UIManager.get("c_print").manageEvent("onCloseBody", function(id){$('#dc_print').removeClass('cmb-opened');$('.comboDummy').remove();});new UIRadioGroup("export_periods", 1);;new UIChooseOption("_check_all", "", "", "", 0, 1);;(function(){var vv = UIManager.get("_check_all");    if (vv){    vv.manageEvent("click", function(id){exportList.checkAllEventHandler.call($('[id*="_check_all"]').get(0));}).setNS("default");}})();UIManager.get("export_periods").addOption("ui4289187", "today", "За сегодня", "export_periods", 1, 1, "export_periods");;(function(){var vv = UIManager.get("ui4289187");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui9985780", "last_7", "За последние 7 дней", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui9985780");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui7881272", "last_30", "За последние 30 дней", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui7881272");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui1179185", "last_90", "За последние 90 дней", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui1179185");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui1710711", "period", "Выберите период:", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui1710711");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").init();;(function(){var vv = UIManager.get("export_periods");    if (vv){    vv.manageEvent("change", function(id) {console.log(id); if (UIManager.get(id).selected.value == "period") { $("#export_calendars").show(); } else { $("#export_calendars").hide(); }}).setNS("default");}})();(new UITextBox("exp_clear_dbegin", "", 1, "", 1, 0, "", 0,0,0,0,0));(function(){var vv = UIManager.get("exp_clear_dbegin");    if (vv){    vv.setNS("default");}})();new DateTimePicker.setup({animation:false,mode:'day',cssClass:'zindex_560005',showClear:false,fdow:1,reverseWheel:false,disableWheel:false,selection:20180609,selectionType:DateTimePicker.SEL_SINGLE,weekNumbers:false,align:'Bl/ / /T/r',inputField:'exp_clear_dbegin',trigger:'bexp_clear_dbegin',dateFormat:'%d.%m.%Y',opacity:1?1:3,titleFormat:'%b %Y',showTime:false,timePos:'right',minuteStep:5,clearOnClick:true,onSelect:function() { this.hide(); UIManager.get("exp_clear_dbegin").$container.find(".ui-textbox-clear-btn").removeClass("ui-textbox-clear-btn-hide"); },onFocus:function() { ; UIManager.get("exp_clear_dbegin").$container.addClass("ui-active"); },onBlur:function() { UIManager.get("exp_clear_dbegin").$container.removeClass("ui-active"); },tmp:null});;UIManager.get("exp_clear_dbegin").manageEvent("click", function(id){UIManager.get("exp_clear_dbegin").$b.click();});(function(){var vv = UIManager.get("exp_clear_dbegin");    if (vv){    vv.setNS("default");}})();(new UITextBox("exp_clear_dend", "", 1, "", 1, 0, "", 0,0,0,0,0));(function(){var vv = UIManager.get("exp_clear_dend");    if (vv){    vv.setNS("default");}})();new DateTimePicker.setup({animation:false,mode:'day',cssClass:'zindex_560005',showClear:false,fdow:1,reverseWheel:false,disableWheel:false,selection:20180609,selectionType:DateTimePicker.SEL_SINGLE,weekNumbers:false,align:'Bl/ / /T/r',inputField:'exp_clear_dend',trigger:'bexp_clear_dend',dateFormat:'%d.%m.%Y',opacity:1?1:3,titleFormat:'%b %Y',showTime:false,timePos:'right',minuteStep:5,clearOnClick:true,onSelect:function() { this.hide(); UIManager.get("exp_clear_dend").$container.find(".ui-textbox-clear-btn").removeClass("ui-textbox-clear-btn-hide"); },onFocus:function() { ; UIManager.get("exp_clear_dend").$container.addClass("ui-active"); },onBlur:function() { UIManager.get("exp_clear_dend").$container.removeClass("ui-active"); },tmp:null});;UIManager.get("exp_clear_dend").manageEvent("click", function(id){UIManager.get("exp_clear_dend").$b.click();});(function(){var vv = UIManager.get("exp_clear_dend");    if (vv){    vv.setNS("default");}})();new UIChooseOption("exp_clear_check[13316]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13316]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13316]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13276]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13276]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13276]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13136]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13136]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13136]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13055]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13055]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13055]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13014]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13014]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13014]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12936]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12936]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12936]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12907]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12907]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12907]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12903]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12903]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12903]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12854]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12854]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12854]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12853]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12853]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12853]"]').get(0));}).setNS("default");}})();exportList.initProp();;exportList.init();
+});
+</script>        <style type="text/css">
+            .ui-wnd .ui-win-restoreBtn {
+                background: none !important;
+                height: 1px !important;
+                width: 1px !important;
+            }
+        </style>
+    <script src="src/navi/js/jquery.autogrow-min.js?rnd=1513270088" class="lazyload" charset="windows-1251"></script><script src="src/navi/js/jquery-deparam.js?rnd=1513270088" class="lazyload" charset="windows-1251"></script></head>
+
+    
+    <body id="body" class="c_ui show-fav c_ui--full c_ui--full-left-padding">
+
+        <!-- header -->
+        <header class="c_header">
+            <div class="g_container">
+                <div class="g_col">
+                    <nav class="c_menu">
+    <a href="http://eaist.mos.ru/" class="" title="" return="" false;"="">
+            <span class="eaist_logo" title="Переход на главную страницу системы ЕАИСТ"></span>
+    </a><a href="#rating" class="" title="" onclick="location.href='index.php?show=rating&amp;menu_id=21';&#10;          return false;">
+            <span>Рейтинги</span>
+    </a><a href="#ExpertNMC" class="" title="" onclick="location.href='index.php?show=ExpertNMC&amp;menu_id=1500';&#10;          return false;">
+            <span>Экспертиза НМЦ</span>
+    </a><a href="#KpgzSpgz" class="active" title="" onclick="location.href='index.php?show=KpgzSpgz&amp;menu_id=1503';&#10;          return false;">
+            <span>КПГЗ/СПГЗ</span>
+    </a><a href="#Administration" class="" title="" onclick="location.href='index.php?show=Administration&amp;menu_id=1700';&#10;          return false;">
+            <span>Администрирование заявок</span>
+    </a><a href="#new_reports" class="" title="" onclick="location.href='index.php?show=new_reports&amp;menu_id=1096';&#10;          return false;">
+            <span>Отчеты</span>
+    </a><a href="#Mrg" class="" title="" onclick="location.href='index.php?show=Mrg&amp;menu_id=1800';&#10;          return false;">
+            <span>РГ МРГ/МРГ</span>
+    </a><a href="#TreeContract" class="" title="" onclick="location.href='index.php?show=TreeContract&amp;menu_id=1600';&#10;          return false;">
+            <span>Дерево контрактов</span>
+    </a>            <a onclick="navi.clearCache()" title="Очистить SQL кэш">
+            <span><i class="ico icon-trash"></i>кэш</span>
+        </a>
+        </nav>                </div>
+                <div class="g_col g_col--min a_middle">
+                    <div class="c_btn-group light">
+                        <!--span class="c_btn" onclick="menu.drawSubsModalWnd();">
+                            <i class="i_message"></i>
+                            <span id="subscriptionBtn">0</span>
+                        </span-->
+                        <span class="c_btn btn-popup reports-download-popup" onclick="navi.togglePopup(this, event)">
+                            <i class="i_download--white"></i>
+                            <span class="all-export-files-count all-export-files-count--have-new-downloads_true">2</span>
+
+                            <div class="c_popup popup-export hidden" style="">
+  <div class="c_popup__header">
+    <div class="title">Экспорт</div>
+    <span class="c_btn--ico c_btn--no-opacity btn-close" onclick="navi.closePopup(this)">
+      <i class="i_close"></i>
+    </span>
+  </div>
+
+  <div id="exp_pannel_cont">
+    <div class="c_popup__subheader">
+  <div class="g_container">
+    <div class="g_col a_middle">
+      <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="c_check_all" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>    </div>
+    <div class="g_col a_right">
+      <span class="c_btn clear-all" onclick="exportList.disableReports('exportListClearAll');">Очистить все</span>
+      <span class="c_btn clear-selected btn-disabled" onclick="exportList.disableReports('exportListClearSelected');">Очистить выбранные</span>
+      <span class="c_btn clear-for-period" onclick="navi.togglePeriods();">Очистить за период</span>
+    </div>
+  </div>
+</div>
+
+<div class="c_popup__body" id="exp_pannel_body">
+  <div class="g_container export-list" id="js_panel-export">
+    <div class="g_row hidden">
+      <div class="g_col"></div>
+      <div class="g_col"></div>
+      <div class="g_col" id="export_cont_ext"></div>
+    </div>
+    <div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13316">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[13316]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 24.05.2018 09:35:30  Дата формирования отчета: 24.05.2018 09:36:12">
+    Использование комплектов типовой документации (планирование)    <div class="export_date">24.05.2018 09:36:12</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.00Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13316); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13276">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[13276]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 23.05.2018 14:50:05  Дата формирования отчета: 23.05.2018 14:50:56">
+    Дерево контрактов. Статусная модель    <div class="export_date">23.05.2018 14:50:56</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.01Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13276); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-13136">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[13136]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 11.05.2018 10:20:58  Дата формирования отчета: 11.05.2018 10:22:15">
+    Статистика по стандартизации    <div class="export_date">11.05.2018 10:22:15</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.06Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13136); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-13055">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[13055]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 27.04.2018 12:01:39  Дата формирования отчета: 27.04.2018 12:02:50">
+    Использование комплектов типовой документации (планирование)    <div class="export_date">27.04.2018 12:02:50</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.04Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13055); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-13014">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[13014]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 27.04.2018 12:01:10  Дата формирования отчета: 27.04.2018 12:02:05">
+    Статистика по стандартизации    <div class="export_date">27.04.2018 12:02:05</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.06Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13014); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-12936">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[12936]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 11.04.2018 07:51:42  Дата формирования отчета: 11.04.2018 08:05:43">
+    Статистика по КПГЗ (отчет целиком)    <div class="export_date">11.04.2018 08:05:43</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.09Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12936); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-12907">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[12907]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 11.04.2018 07:49:59  Дата формирования отчета: 11.04.2018 08:05:43">
+    Статистика администрирования заявок в разрезе дат с 01.01.2018 по 11.04.2018    <div class="export_date">11.04.2018 08:05:43</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.01Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12907); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-12903">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[12903]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 10.04.2018 10:48:59  Дата формирования отчета: 10.04.2018 11:15:29">
+    Справка об администрировании заявок с 01.01.2018 по 10.04.2018    <div class="export_date">10.04.2018 11:15:29</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.01Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12903); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-12854">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[12854]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 28.03.2018 09:56:10  Дата формирования отчета: 11.04.2018 08:05:37">
+    Дерево контрактов. Статусная модель. Количество Государственные контракты &gt; На этапе заключения - 3,0 (с объединением ячеек)    <div class="export_date">11.04.2018 08:05:37</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.01Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12854); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div><div class="g_row export-list__item export-list__item--downloaded_true" id="js_queue-item-12853">
+  <div class="g_col g_col--min">
+    <div class="ui-style-string  ui-checkbox c_chbox">
+    <div id="cexp_clear_check[12853]" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label"> </span></div>
+    </div>  </div>
+    <div class="g_col col-count">
+        <span class="export_count"></span>
+    </div>
+  <div class="g_col export-report-name" title="Дата запроса отчета: 28.03.2018 09:53:59  Дата формирования отчета: 28.03.2018 09:55:41">
+    Дерево контрактов. Статусная модель. Количество Государственные контракты &gt; На этапе заключения &gt; Завершенные &gt; Расторгнутые - 1,0 (с объединением ячеек)    <div class="export_date">28.03.2018 09:55:41</div>
+  </div>
+  <div class="g_col g_col--min">
+    <span class="export_proprs" status_report="1">0.01Mb</span>
+  </div>
+  <div class="g_col g_col--min a_center">
+    <span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12853); return false;" title="Скачать"><i class="i_download--dark"></i></span>
+  </div>
+</div>  </div>
+</div>
+
+<div class="c_popup__footer--light min a_center">
+  Показаны  <span id="exp_count_visible">10</span>  из <span id="exp_count_all">137</span>
+  <a id="export_show_more" class="" nextpage="2" href="" onclick="exportList.exportNextPage(this); return false;">Показать следующие 10</a>
+</div>
+
+<div class="c_popup__tab" id="peiods_controls">
+  <div class="c_popup__body">
+    <div>Очистить список загрузок:</div>
+
+    <div class="export_select-period_controls">
+      <div id="cexport_periods" class="ui-control" tabindex="0"><div class="ui-style-list  ui-radio  c_radio">
+    <div id="cui4289187" title="За сегодня" class="ui-control ui-active" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label">За сегодня</span></div>
+    </div><div class="ui-style-list  ui-radio  c_radio">
+    <div id="cui9985780" title="За последние 7 дней" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label">За последние 7 дней</span></div>
+    </div><div class="ui-style-list  ui-radio  c_radio">
+    <div id="cui7881272" title="За последние 30 дней" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label">За последние 30 дней</span></div>
+    </div><div class="ui-style-list  ui-radio  c_radio">
+    <div id="cui1179185" title="За последние 90 дней" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label">За последние 90 дней</span></div>
+    </div><div class="ui-style-list  ui-radio  c_radio">
+    <div id="cui1710711" title="Выберите период:" class="ui-control" tabindex="0">
+       <div class="btn "></div>
+       <span class="text-label">Выберите период:</span></div>
+    </div></div><div class="export_period" id="export_calendars"><div class="ui-textbox ui-input ui-calendar " style=" width:140px;" title="">
+      <div class="ui-changed ui-control" style="width: 100%;" id="cexp_clear_dbegin">
+  <div class="ui-textbox-inner">
+    <input class="ui-textbox-content" type="text" value="09.06.2018" id="exp_clear_dbegin" readonly="readonly" tabindex="0" />
+    <input type="button" class="ui-textbox-cal-btn" id="bexp_clear_dbegin" tabindex="-1" />
+    <div class="ui-textbox-clear-btn" onclick="UIManager.get('exp_clear_dbegin').clear();"></div>
+  </div>
+  <div class="ui-textbox-inner-right"></div>
+  </div></div><span class="cals-separator">-</span><div class="ui-textbox ui-input ui-calendar " style=" width:140px;" title="">
+      <div class="ui-changed ui-control" style="width: 100%;" id="cexp_clear_dend">
+  <div class="ui-textbox-inner">
+    <input class="ui-textbox-content" type="text" value="09.06.2018" id="exp_clear_dend" readonly="readonly" tabindex="0" />
+    <input type="button" class="ui-textbox-cal-btn" id="bexp_clear_dend" tabindex="-1" />
+    <div class="ui-textbox-clear-btn" onclick="UIManager.get('exp_clear_dend').clear();"></div>
+  </div>
+  <div class="ui-textbox-inner-right"></div>
+  </div></div></div>    </div>
+  </div>
+  <div class="c_popup__footer--light">
+    <span class="c_btn" onclick="exportList.disableReports('exportListClearPeriod');">Очистить</span>
+    <span class="c_btn" onclick="navi.togglePeriods();">Отмена</span>
+  </div>
+</div>
+  </div>
+</div>                        </span>
+                    </div>
+                </div>
+                <div class="g_col g_col--min a_middle">
+                    <span class="user-name" onclick="event.stopPropagation();">Иванов О.З.</span>
+                    <span class="c_btn--ico" onclick="navi.exit(event, 'http://eaist.mos.ru');"><i class="i_exit"></i></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- content -->
+        <main id="main-content">
+            <div class="content-container" id="content-container">
+<nav class="c_side-menu">
+  	<ul>
+				<li>
+			<a id="c_values__item_1504" data-ext="KpgzSpgz" data-name="StandardizationStatistic" href="?show=KpgzSpgz&amp;menu_id=1503&amp;report_id=1504">
+				1. Статистика по стандартизации<span style="color: green"> (id: 17)</span>			</a>
+		</li>
+				<li>
+			<a id="c_values__item_1507" data-ext="KpgzSpgz" data-name="KPGZUsage" href="?show=KpgzSpgz&amp;menu_id=1503&amp;report_id=1507">
+				2. Использование КПГЗ<span style="color: green"> (id: 27)</span>			</a>
+		</li>
+				<li>
+			<a id="c_values__item_1508" data-ext="KpgzSpgz" data-name="DocumentUsage" href="?show=KpgzSpgz&amp;menu_id=1503&amp;report_id=1508">
+				3. Использование типовой документации (планирование)<span style="color: green"> (id: 28)</span>			</a>
+		</li>
+				<li>
+			<a id="c_values__item_1509" data-ext="KpgzSpgz" data-name="DocumentUsageContract" href="?show=KpgzSpgz&amp;menu_id=1503&amp;report_id=1509">
+				4. Использование типовой документации (контрактация)<span style="color: green"> (id: 32)</span>			</a>
+		</li>
+		  	</ul>
+  	<span class="btn-exp vertical" onclick="navi.expandSubmenu(this)"></span>
+</nav>
+<div id="reportContent" style="height: 100%;">
+
+</div>
+<div class="trash hidden">
+    <div class="extra-features">
+        <div id="subscriptionBtn" class="subscribe_btn_block" title="Подписаться" onclick="menu.drawSubsModalWnd();" style="display: inline-block;">0</div>
+        <div id="printBtn" title="Печать" onclick="navi.onPrintClick(5);"></div>
+        <div id="PDFLink" class="print_btn_block" title="Печать"><div id="dc_print" class="ui-cmb-head  has-node-ico  ui-inline   ui-control" style="width:32px" tabindex="-1">
+    <div class="ui-spacer"><!-- [empty] --></div><div class=" ui-dec ui-ico"><!-- [empty] --></div><div class="ui-inner drop-on-caption"></div>
+                <div class="ui-cmb-count"><!-- [empty] --></div>
+                <button class="ui-cmb-drop"><span></span></button>
+            </div></div>
+
+    </div>    <div class="main-container"></div>
+</div>
+
+</div>
+        </main>
+
+        
+        <div class="win-locker"></div>
+
+        
+            <div class="b-debug-toggles">
+                <div class="b-debug-toggle red" onclick="toggleDebug('Messages')">Messages</div>
+                <div class="b-debug-toggle green" onclick="toggleDebug('Queries')">Queries</div>
+                <div class="b-debug-toggle blue" onclick="toggleDebug('Timing')">Timing</div>
+                <div class="b-debug-toggle gray" onclick="toggleDebug('Ajax')" id="AjaxToggler">Ajax</div>
+                <div class="b-debug-toggle vred" onclick="toggleDebug('Errors')" id="ErrorsToggler">Errors</div>
+                
+            </div>
+            <div class="b-debug-content">
+              <div id="debugMessagesCont" class="b-debug-messages hidden"><div class="dbg_header red">Отладочные сообщения</div>   <div id="debugMessages" class="d-content"><pre>set custom error handler</pre><pre>string(20) "Config is CoreConfig"
+</pre><pre>          new connect to ORACLE thanks to property data</pre><br /><b>Cached query</b><pre>string(11) "magic_files"
+</pre><pre>         Theme created </pre><pre>         adding func to onafterauth</pre><pre>         adding func to oncursoropen</pre><pre>         adding func to onafterlogout</pre><pre>         adding func to exportbeforeoutput</pre><pre>         adding func to onbeforeexecute</pre><pre>        starting loading modules</pre><pre>          loading modules/common/module.php</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onafterauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onfinish</pre><pre>          handling onbeforeauth</pre><pre>          executing event onbeforeauth</pre><pre>         result of event onbeforeauth is: { "checkVariables": null, "setAllModules": null, "doAuthorizeByToken": false }</pre><pre>          handling onafterauth</pre><pre>          executing event onafterauth</pre><pre>          new connect to ORACLE thanks to property auth</pre><pre>         result of event onafterauth is: { "onAfterAuth": null, "checkAuthorizedExport": null }</pre><pre>          loaded Theme C:\inetpub\wwwroot\src/theme/theme.php</pre><pre>         Theme created </pre><pre>          loading modules/ui/module.php</pre><pre>          UI module loaded</pre><pre>          didnt add function</pre><pre>         adding func to onexactbeforeexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to initmodal</pre><pre>          inc dir C:\inetpub\wwwroot\modules/ui/classes/new</pre><pre>          loading modules/uitree/module.php</pre><pre>          loading modules/ui/module.php</pre><pre>          module modules/ui already loaded</pre><pre>          inc dir C:\inetpub\wwwroot\/modules/uitree/classes</pre><pre>          loading modules/datetimepicker/module.php</pre><pre>          DateTimePicker module loaded</pre><pre>          loading modules/mvc/module.php</pre><pre>          MVC template loaded</pre><pre>          handling initmodal</pre><pre>          executing event initmodal</pre><pre>         result of event initmodal is: { "initModal": null }</pre><pre>          loading modules/tree/module.php</pre><pre>          TreeSelectionModifier Create</pre><pre>          TreeSelectionModifier get from omg mode= 0 </pre><pre>          handling onbeforeexecute</pre><pre>          executing event onbeforeexecute</pre><pre>         result of event onbeforeexecute is: { "onBeforeExecute": null }</pre><pre>      Starting execute file src/standardization/standardization.php</pre><pre>          handling onexactbeforeexecute</pre><pre>          executing event onexactbeforeexecute</pre><pre>         result of event onexactbeforeexecute is: { "initStructAndTitle": null }</pre><pre>          loading modules/desktop/module.php</pre><pre>          inc dir C:\inetpub\wwwroot\modules/desktop/classes</pre><pre>          loading modules/combobox/module.php</pre><pre>          Combos module loaded</pre><pre>          DESKTOP module loaded</pre><pre>          loading modules/olap/module.php</pre><pre>          OLAP module loaded</pre><pre>          handling initmodal</pre><pre>          executing event initmodal</pre><pre>         result of event initmodal is: { "initModal": null }</pre><pre>          loading modules/desktop/module.php</pre><pre>          module modules/desktop already loaded</pre><pre>          loading modules/embed/module.php</pre><pre>          loading modules/table_builder/module.php</pre><pre>          loading modules/grid_dev2/module.php</pre><pre>          Grid dev2 module loaded !</pre><pre>          inc dir C:\inetpub\wwwroot\src/classes/models</pre><pre>          new connect to ORACLE thanks to property data_inp</pre><pre>          new connect to ORACLE thanks to property granit</pre><pre>          id_source not found in sql#16</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/systemLayout/tpl_leftSideBlockMenu.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_combo.php</pre><pre>         adding func to onafterexecute</pre><pre>        processed tpl C:\inetpub\wwwroot\src/standardization/tpl/tpl_page.php</pre><pre>          loading modules/datetimepicker/module.php</pre><pre>          module modules/datetimepicker already loaded</pre><pre>          loading modules/datetimepicker/module.php</pre><pre>          module modules/datetimepicker already loaded</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        tpl not found C:\inetpub\wwwroot\src/theme/ui/calendarbox.php</pre><pre>        processed tpl tpl/calendarbox.php</pre><pre>        tpl not found C:\inetpub\wwwroot\src/theme/ui/calendarbox.php</pre><pre>        processed tpl tpl/calendarbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_queue_list.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_panel.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export.php</pre><pre>          handling onafterexecute</pre><pre>          executing event onafterexecute</pre><pre>         result of event onafterexecute is: { "checkUniqueCss": null, "checkColorTheme": null, "moveComboBidies": null }</pre><pre>          handling onfinish</pre><pre>          executing event onfinish</pre><pre>         result of event onfinish is: { "stopTiming": null }</pre><pre>        Finish</pre><h2>FE</h2><pre>FE.manageEvent("onload",function(event, target){
+  FE.loadedExtraFiles = "17414l17416l17418l17420l17422l17424l17426l17428l17430l17432l17434l17436l17438l17440l17442l17444l17446l17448l17450l17452l17454l17456l17456l17458l17460l17462l17464l17466l17468l17470l17472l17474l17476l17478l17480l17482l17484l17486l17488l17490l17492l17494l17496l17498l17500l17502l17504l17506l17508l17510l17512l17514l17516l17518l17520l17456l17522l17524l17526l17528l17530l17532l17534l17536l17538l17540l17542l17544l17546l17548l17550l17552l17554l17556l17558l17560l17562l17564l17416l17516l17566l17568l17552l17570l18256l18258l18260l18262l18264l18266l18268l18270l18272l18314l18316l18318l17516l17518l17520l17456l17522l18320l18322l18324l18326l17416l18328l17516l17566l17568l18330l18332l17572l17574l17576l17578l17580l17582l17584l17586l17588l17590l17592l17594l17596l17598l17600l17602l17604l17606l17608l17610l17612l17614l17616l17618l17620l17622l17624l14932l14934l17626l17628l17630l17636l17696l17638l17642l17644l18194l17660l17662l17664l17666l17668l17670l17672l14938l14940l14942l14944l14946l14948l17618l17618l17674l17676";;$("#ui_combo_bodies_all").appendTo("body");;$.browser.browserName = "Chrome"; $.browser.browserVersion = "66.0.3359.181";;$.browser.isIPad = false;;$.browser.isMobile = false;;$.browser.isPhone = false;;applyRound('#newname', '', '#E5E5E5');;navi.panelType = 'panel';; $('.grid-expander').live('click' , function(){  detail.setDashToEmptyCells();  }); ;                $('#subscriptionBtn').css('display','inline-block');                jQuery(function($) {                	$('[id*=\"c_values__item_\"]', '.c_side-menu').click(function(event) {                 	    window.submenuClick = true;                	    return navi.manageReportMenuSelectionEvent(event)                 	});                });                setTimeout( function(){ $('#c_values__item_54').click(); }, 500);;navi.onload('09.06.2018'); ;detail.is_report= 1;
+});
+FE.manageEvent("onresize",function(event, target){
+   UIComboManager.closeAllBodies(); ;
+});
+FE.manageEvent("onafterload",function(event, target){
+  $('#blocks-set').html('');$('.main-left-td').show();(function(){var t = UITreeManager.create("t_print");    t.setSettings({"id":"t_print","synchronizeLabels":{},"notSelectedText":"","decodeNodeName":1,"hasHierarcy":1,"renderAll":1,"initEventCM":{"0":"onafterload","1":"ajaxloadcompleted"},"ajax":0,"label":"Печать","minSearchLen":0,"defaultHeight":"","pathNameSeporator":" / ","colorSearchResults":1,"colorBackground":"#0099CC","colorFont":"#FFFFFF","loadSelNotLoadedNodes":1,"coloring":{},"startWith":0,"maxSelected":1000000000,"waveSelection":0,"sortSingleSelect":0,"orderCondition":"","db":"data","labelFormat":{"n":""},"caseInsensetive":1,"indepNodeVal":-100500,"disableFiltersVal":-100500,"orderSearchResult":"default","searchOnlyFixedNodes":{},"viewHasHierarcy":1});    t.setData([{id:'1',n:'XLSX',hc:0},{id:'2',n:'PDF',hc:0},{id:'3',n:'HTML',hc:0},{id:'4',n:'CSV',hc:0}]);if (t.recalcAllNodes){t.recalcAllNodes()}})();setTimeout("UITreeManager.get(\"t_print\").draw('auto');",0);;(function(){var vv = UITreeManager.get("t_print");    if (vv){    vv.manageEvent("onsetselected", function(id){navi.onPrintClick();}).setNS("default");}})();(new UICombo("c_print", "", 1)).setSettings({"tplName":"t_combo.php","selectedListInline":0,"selectedListPosition":"","direction":"auto","dropOnCaption":1,"bodyHeight":125,"headWidth":32,"bodyWidth":200,"headClass":"","bodyClass":"","maxLabelLength":0,"sizeBodyToHead":0,"autoHeight":0,"bodyFollowHead":0,"contentOffset":4,"preHiddenSearch":0,"resizable":0,"resizeHeaderAuto":0,"resizeMinWidth":200,"resizeMaxWidth":800,"resizeMinHeight":100,"resizeStep":10,"handles":"se","handlesUp":"ne","msIco":"","icoAction":"","getNodeName":1,"getNodeIco":1,"resizeContainer":"body","resizeMaxHeight":800,"resizeHideBody":0,"staticLabel":0,"smartLabel":0,"calcCount":"calcAll","inlineHead":1});(function(){var vv = UIManager.get("c_print");    if (vv){    vv.manageEvent("onOpenBody", function(id){UIManager.get("c_print").$container.addClass("opened");}).manageEvent("onCloseBody", function(id){UIManager.get("c_print").$container.removeClass("opened");}).setNS("default");}})();UIManager.get("c_print").manageEvent("onOpenBody", function(id){$('#dc_print').addClass('cmb-opened'); $('.comboDummy').remove(); cd = $('&lt;div class="comboDummy"&gt;'); cd.width($('#dc_print').width()-2); $('#cmbBody_c_print').append(cd);});UIManager.get("c_print").manageEvent("onCloseBody", function(id){$('#dc_print').removeClass('cmb-opened');$('.comboDummy').remove();});new UIRadioGroup("export_periods", 1);;new UIChooseOption("_check_all", "", "", "", 0, 1);;(function(){var vv = UIManager.get("_check_all");    if (vv){    vv.manageEvent("click", function(id){exportList.checkAllEventHandler.call($('[id*="_check_all"]').get(0));}).setNS("default");}})();UIManager.get("export_periods").addOption("ui4289187", "today", "За сегодня", "export_periods", 1, 1, "export_periods");;(function(){var vv = UIManager.get("ui4289187");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui9985780", "last_7", "За последние 7 дней", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui9985780");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui7881272", "last_30", "За последние 30 дней", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui7881272");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui1179185", "last_90", "За последние 90 дней", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui1179185");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").addOption("ui1710711", "period", "Выберите период:", "export_periods", 0, 1, "export_periods");;(function(){var vv = UIManager.get("ui1710711");    if (vv){    vv.setNS("default");}})();UIManager.get("export_periods").init();;(function(){var vv = UIManager.get("export_periods");    if (vv){    vv.manageEvent("change", function(id) {console.log(id); if (UIManager.get(id).selected.value == "period") { $("#export_calendars").show(); } else { $("#export_calendars").hide(); }}).setNS("default");}})();(new UITextBox("exp_clear_dbegin", "", 1, "", 1, 0, "", 0,0,0,0,0));(function(){var vv = UIManager.get("exp_clear_dbegin");    if (vv){    vv.setNS("default");}})();new DateTimePicker.setup({animation:false,mode:'day',cssClass:'zindex_560005',showClear:false,fdow:1,reverseWheel:false,disableWheel:false,selection:20180609,selectionType:DateTimePicker.SEL_SINGLE,weekNumbers:false,align:'Bl/ / /T/r',inputField:'exp_clear_dbegin',trigger:'bexp_clear_dbegin',dateFormat:'%d.%m.%Y',opacity:1?1:3,titleFormat:'%b %Y',showTime:false,timePos:'right',minuteStep:5,clearOnClick:true,onSelect:function() { this.hide(); UIManager.get("exp_clear_dbegin").$container.find(".ui-textbox-clear-btn").removeClass("ui-textbox-clear-btn-hide"); },onFocus:function() { ; UIManager.get("exp_clear_dbegin").$container.addClass("ui-active"); },onBlur:function() { UIManager.get("exp_clear_dbegin").$container.removeClass("ui-active"); },tmp:null});;UIManager.get("exp_clear_dbegin").manageEvent("click", function(id){UIManager.get("exp_clear_dbegin").$b.click();});(function(){var vv = UIManager.get("exp_clear_dbegin");    if (vv){    vv.setNS("default");}})();(new UITextBox("exp_clear_dend", "", 1, "", 1, 0, "", 0,0,0,0,0));(function(){var vv = UIManager.get("exp_clear_dend");    if (vv){    vv.setNS("default");}})();new DateTimePicker.setup({animation:false,mode:'day',cssClass:'zindex_560005',showClear:false,fdow:1,reverseWheel:false,disableWheel:false,selection:20180609,selectionType:DateTimePicker.SEL_SINGLE,weekNumbers:false,align:'Bl/ / /T/r',inputField:'exp_clear_dend',trigger:'bexp_clear_dend',dateFormat:'%d.%m.%Y',opacity:1?1:3,titleFormat:'%b %Y',showTime:false,timePos:'right',minuteStep:5,clearOnClick:true,onSelect:function() { this.hide(); UIManager.get("exp_clear_dend").$container.find(".ui-textbox-clear-btn").removeClass("ui-textbox-clear-btn-hide"); },onFocus:function() { ; UIManager.get("exp_clear_dend").$container.addClass("ui-active"); },onBlur:function() { UIManager.get("exp_clear_dend").$container.removeClass("ui-active"); },tmp:null});;UIManager.get("exp_clear_dend").manageEvent("click", function(id){UIManager.get("exp_clear_dend").$b.click();});(function(){var vv = UIManager.get("exp_clear_dend");    if (vv){    vv.setNS("default");}})();new UIChooseOption("exp_clear_check[13316]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13316]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13316]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13276]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13276]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13276]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13136]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13136]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13136]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13055]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13055]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13055]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[13014]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[13014]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13014]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12936]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12936]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12936]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12907]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12907]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12907]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12903]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12903]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12903]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12854]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12854]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12854]"]').get(0));}).setNS("default");}})();exportList.initProp();;new UIChooseOption("exp_clear_check[12853]", "", "", "", 0, 1);;(function(){var vv = UIManager.get("exp_clear_check[12853]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12853]"]').get(0));}).setNS("default");}})();exportList.initProp();;exportList.init();
+});
+</pre></div></div>
+              <div id="debugAjaxCont" class="b-debug-messages hidden"><div class="dbg_header gray"><span id="maxAjax" onclick="toggleMaximize('Ajax');">Развернуть</span>Ajax запросы <span onclick="clearAjaxResults()">Очистить</span></div>          <div id="debugAjax" class="d-content"><div id="handledAjax"><div id="d3098422497"><div class="ajaxResultHeader" id="header3098422497" onclick="toggleAjaxResult(this)">#3098422497 | -&gt;: 12:41:32 | &lt;-: 12:41:32 | t: 0.694 s. | </div><div id="body3098422497" class="ajaxResultBody hidden"><pre>Request to index.php</pre><hr noshade="" size="1" /><div><b>Response Headers</b><pre>pragma: no-cache
+date: Sat, 09 Jun 2018 07:41:33 GMT
+content-encoding: gzip
+accept-charset: windows-1251
+last-modified: Sat, 09 Jun 2018 07:41:32 GMT
+server: nginx
+x-powered-by: PHP/7.0.24
+vary: Accept-Encoding
+x-eaist-host: 172.17.48.155:80
+content-type: text/html; charset=windows-1251,text/html; charset=windows-1251
+cache-control: no-cache
+transfer-encoding: chunked
+connection: keep-alive
+web: 6
+expires: Sat, 09 Jun 2018 07:41:32 GMT
+</pre></div><hr noshade="" size="1" /><pre>set custom error handler</pre><pre>string(20) "Config is CoreConfig"
+</pre><pre>          new connect to ORACLE thanks to property data</pre><br /><b>Cached query</b><pre>string(11) "magic_files"
+</pre><pre>         Theme created </pre><pre>         adding func to onafterauth</pre><pre>         adding func to oncursoropen</pre><pre>         adding func to onafterlogout</pre><pre>         adding func to exportbeforeoutput</pre><pre>         adding func to onbeforeexecute</pre><pre>        starting loading modules</pre><pre>          loading modules/common/module.php</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onafterauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onfinish</pre><pre>          handling onbeforeauth</pre><pre>          executing event onbeforeauth</pre><pre>         result of event onbeforeauth is: { "checkVariables": null, "setAllModules": null, "doAuthorizeByToken": false }</pre><pre>          handling onafterauth</pre><pre>          executing event onafterauth</pre><pre>          new connect to ORACLE thanks to property auth</pre><pre>         result of event onafterauth is: { "onAfterAuth": null, "checkAuthorizedExport": null }</pre><pre>          loaded Theme C:\inetpub\wwwroot\src/theme/theme.php</pre><pre>         Theme created </pre><pre>          loading modules/ui/module.php</pre><pre>          UI module loaded</pre><pre>          didnt add function</pre><pre>         adding func to onexactbeforeexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to initmodal</pre><pre>          inc dir C:\inetpub\wwwroot\modules/ui/classes/new</pre><pre>          loading modules/uitree/module.php</pre><pre>          loading modules/ui/module.php</pre><pre>          module modules/ui already loaded</pre><pre>          inc dir C:\inetpub\wwwroot\/modules/uitree/classes</pre><pre>          loading modules/datetimepicker/module.php</pre><pre>          DateTimePicker module loaded</pre><pre>          loading modules/mvc/module.php</pre><pre>          MVC template loaded</pre><pre>          handling initmodal</pre><pre>          executing event initmodal</pre><pre>         result of event initmodal is: { "initModal": null }</pre><pre>          loading modules/tree/module.php</pre><pre>          TreeSelectionModifier Create</pre><pre>          TreeSelectionModifier get from omg mode= 0 </pre><pre>          handling onbeforeexecute</pre><pre>          executing event onbeforeexecute</pre><pre>         result of event onbeforeexecute is: { "onBeforeExecute": null }</pre><pre>      Starting execute file src/navi/navi.php</pre><pre>          handling onexactbeforeexecute</pre><pre>          executing event onexactbeforeexecute</pre><pre>         result of event onexactbeforeexecute is: { "initStructAndTitle": null }</pre><pre>          loading modules/table_builder/module.php</pre><pre>          inc dir C:\inetpub\wwwroot\src/classes/models</pre><pre>          loading modules/desktop/module.php</pre><pre>          inc dir C:\inetpub\wwwroot\modules/desktop/classes</pre><pre>          loading modules/combobox/module.php</pre><pre>          Combos module loaded</pre><pre>          DESKTOP module loaded</pre><pre>          loading modules/olap/module.php</pre><pre>          OLAP module loaded</pre><pre>          handling initmodal</pre><pre>          executing event initmodal</pre><pre>         result of event initmodal is: { "initModal": null }</pre><pre>          loading modules/desktop/module.php</pre><pre>          module modules/desktop already loaded</pre><pre>          loading modules/embed/module.php</pre><pre>          loading modules/grid_form/module.php</pre><pre>          module modules/grid_form/module.php doesnt exists</pre><pre>          loading modules/grid_dev2/module.php</pre><pre>          Grid dev2 module loaded !</pre><pre>          loading modules/desktop/module.php</pre><pre>          module modules/desktop already loaded</pre><pre>          loading modules/olap/module.php</pre><pre>          module modules/olap already loaded</pre><pre>          loading modules/grid_form/module.php</pre><pre>          module modules/grid_form/module.php doesnt exists</pre><pre>          new connect to ORACLE thanks to property data_inp</pre><pre>          new connect to ORACLE thanks to property granit</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>          handling onafterexecute</pre><pre>          executing event onafterexecute</pre><pre>         result of event onafterexecute is: { "checkUniqueCss": null, "checkColorTheme": null }</pre><pre>          handling onfinish</pre><pre>          executing event onfinish</pre><pre>         result of event onfinish is: { "stopTiming": null }</pre><pre>        Finish</pre><pre>      Processing extra Ajax incl files</pre><table class="queries-table"><tbody><tr><th style="width:20px">№</th><th>Text</th></tr><tr><td>1</td><td>data 0.002:<pre>select * from rep_core_config</pre><span></span></td></tr><tr><td>2</td><td>data 0.002:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=0
+                                                </span></td></tr><tr><td>3</td><td>data 0.003:<pre>          SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp,
+            TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME,
+            USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL
+          FROM CORE_ADMIN_MSK. T_USERS T
+          LEFT JOIN CORE_ADMIN_MSK. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID
+          LEFT JOIN CORE_ADMIN_MSK. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED
+          LEFT JOIN CORE_ADMIN_MSK. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED
+          WHERE S.USER_SESSION = 'fed8d4dd0f21e9277db802f6ddfde0d7' AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = 777</pre><span> <br />modified :  SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp, TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME, USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL FROM CORE_ADMIN_MSK. T_USERS T LEFT JOIN CORE_ADMIN_MSK. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID LEFT JOIN CORE_ADMIN_MSK. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED LEFT JOIN CORE_ADMIN_MSK. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED WHERE S.USER_SESSION = :x0 AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = :x1 </span></td></tr><tr><td>4</td><td>data 0.001:<pre>    begin /*update user id*/
+         DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+      end;</pre>
+<span>bound :id as INT 21=1
+                                                </span></td></tr><tr><td>5</td><td>auth 0.003:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>6</td><td>auth 0.003:<pre>SELECT user_session FROM t_users_sessions WHERE user_id = :USER_ID AND sys_id = :SYS_ID </pre><span>bound USER_ID as INT 21=1
+                bound SYS_ID as INT 21=777
+                </span></td></tr><tr><td>7</td><td>data 0.006:<pre>        SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG
+        FROM CORE_ADMIN_MSK. T_USERS_ROLES
+        LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1
+        UNION ALL
+        SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG
+        FROM CORE_ADMIN_MSK. V_USER_PRIVS
+        LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1</pre><span> <br />modified :  SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG FROM CORE_ADMIN_MSK. T_USERS_ROLES LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 UNION ALL SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG FROM CORE_ADMIN_MSK. V_USER_PRIVS LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 </span></td></tr><tr><td>8</td><td>auth 0.003:<pre>select * from T_SYS_BLOCK_STATUS where id in (select max(ID) from T_SYS_BLOCK_STATUS)</pre><span></span></td></tr><tr><td>9</td><td>data 0.007:<pre>          SELECT MENU_ID, NAME, SHOW, PARENT_ID, FILE_PATH, N_ORDER, HIDDEN,
+            ENABLED, SUBTITLE, MODULE,
+             R,
+             W
+          FROM MSK_EAIST_ANALYTIC.rep_core_menu RCM
+          LEFT JOIN (
+            SELECT MENU_ID m_id, MIN(R) AS R, MIN(
+              CASE WHEN R &gt; 0 THEN W ELSE 0 END
+            ) AS W
+            FROM CORE_ADMIN_MSK. V_USER_PRIVS VUP
+            LEFT JOIN CORE_ADMIN_MSK. T_MENU_PRIVS TMP ON TMP.PRIV_ID = VUP.PRIV_ID
+            WHERE VUP.USER_ID = 1 AND TMP.SYS_ID=777 AND
+              VUP.SYS_ID=777 AND NOT MENU_ID IS NULL
+            GROUP BY MENU_ID
+          ) S ON RCM.MENU_ID||'' = S.M_ID||''
+           WHERE R &gt; 0 AND ENABLED=1 
+          ORDER BY N_ORDER, NAME</pre><span></span></td></tr><tr><td>10</td><td>data_inp 0.004:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>11</td><td>data_inp 0.004:<pre>SELECT i.id, i.s_name FROM t_indicators i WHERE is_active = 1 AND  EXISTS (SELECT 1 FROM ref_indicators_groups r WHERE r.id_menu_gr= :id_gr AND r.id_ind = i.id )</pre><span>bound :id_gr as NULL
+                </span></td></tr><tr><td>12</td><td>data_inp 0.003:<pre>select id_source from REF_REPORTS_SOURCES ref where ref.ID_REPORT = :M_ID and ref.is_enable = 1 order by id_source</pre><span>bound M_ID as INT 21=6
+                </span></td></tr><tr><td>13</td><td>data_inp 0.002:<pre>SELECT
+	id
+FROM
+	t_versions
+WHERE
+	TRUNC(d_version) = :d</pre><span>bound d as SQLT_CHR good 09.06.2018 (10)
+                </span></td></tr><tr><td>14</td><td>granit 0.003:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>15</td><td>granit 0.002:<pre>    BEGIN
+					set_eaist_context_value ( 'version_date', '09.06.2018' );
+				END;</pre>
+<span></span></td></tr><tr><td>16</td><td>data_inp 0.006:<pre>SELECT
+	COUNT(1) AS kol
+FROM
+	t_report_req
+WHERE
+	is_enabled = 1 AND
+	is_mail = 0 AND
+	id_user = :id_user </pre><span>bound id_user as INT 21=1
+                </span></td></tr><tr><td>17</td><td>data_inp 0.002:<pre>SELECT
+	t.*,
+	COUNT(1) OVER() AS visible_rows
+FROM
+(
+	SELECT
+		ROW_NUMBER() OVER(ORDER BY id DESC) AS rn,
+		id,
+		current_state,
+		filesize,
+		report_content,
+   		TO_CHAR(d_req, 'DD.MM.YYYY HH24:MI:SS') AS d_req,
+   		TO_CHAR(d_last, 'DD.MM.YYYY HH24:MI:SS') AS d_last,
+   		id_report,
+   		canceled,
+   		s_name
+	FROM
+		t_report_req
+	WHERE
+		is_enabled = 1 AND
+		is_mail = 0 AND
+		id_user = :id_user/* AND
+		downloaded = 0*/
+) t
+WHERE
+	(:id_req &gt; 0 AND :id_req = t.id) OR
+	t.rn BETWEEN :start_num_row AND :last_num_row</pre><span>bound id_user as INT 21=1
+                bound start_num_row as INT 21=1
+                bound last_num_row as INT 21=10
+                bound id_req as INT 21=0
+                </span></td></tr></tbody></table><table class="dbg_timingTable"><tbody><tr><th style="width:90px">Key</th><th>Time</th></tr><tr><td>output</td><td>0.5792</td></tr><tr><td>all</td><td>0.5723</td></tr><tr><td>debugMessage</td><td>0.0000</td></tr><tr><td>openDb_data</td><td>0.0903</td></tr><tr><td>exact openDb_data</td><td>0.0903</td></tr><tr><td>op query 1</td><td>0.0016</td></tr><tr><td>onafterauth</td><td>0.0000</td></tr><tr><td>oncursoropen</td><td>0.0000</td></tr><tr><td>onafterlogout</td><td>0.0000</td></tr><tr><td>exportbeforeoutput</td><td>0.0000</td></tr><tr><td>onbeforeexecute</td><td>0.0000</td></tr><tr><td>onbeforeauth</td><td>0.0000</td></tr><tr><td>onfinish</td><td>0.0000</td></tr><tr><td>CLIENT</td><td>0.0001</td></tr><tr><td>ex query 2</td><td>0.0022</td></tr><tr><td>op query 3</td><td>0.0028</td></tr><tr><td>ex query 4</td><td>0.0008</td></tr><tr><td>openDb_auth</td><td>0.1120</td></tr><tr><td>exact openDb_auth</td><td>0.1087</td></tr><tr><td>ex query 5</td><td>0.0032</td></tr><tr><td>op query 6</td><td>0.0033</td></tr><tr><td>op query 7</td><td>0.0062</td></tr><tr><td>op query 8</td><td>0.0026</td></tr><tr><td>onexactbeforeexecute</td><td>0.0000</td></tr><tr><td>onafterexecute</td><td>0.0000</td></tr><tr><td>onlogintpl</td><td>0.0000</td></tr><tr><td>initmodal</td><td>0.0000</td></tr><tr><td>building menu</td><td>0.0134</td></tr><tr><td>TreeSelectionModifier get</td><td>0.0000</td></tr><tr><td>getFromQuery a</td><td>0.0092</td></tr><tr><td>op query 9</td><td>0.0075</td></tr><tr><td>upd ch lvls</td><td>0.0000</td></tr><tr><td>openDb_data_inp</td><td>0.1036</td></tr><tr><td>exact openDb_data_inp</td><td>0.0998</td></tr><tr><td>ex query 10</td><td>0.0036</td></tr><tr><td>op query 11</td><td>0.0041</td></tr><tr><td>op query 12</td><td>0.0030</td></tr><tr><td>op query 13</td><td>0.0018</td></tr><tr><td>openDb_granit</td><td>0.1162</td></tr><tr><td>exact openDb_granit</td><td>0.1131</td></tr><tr><td>ex query 14</td><td>0.0030</td></tr><tr><td>ex query 15</td><td>0.0015</td></tr><tr><td>op query 16</td><td>0.0061</td></tr><tr><td>op query 17</td><td>0.0018</td></tr><tr><td>tpl ui/t_checkbox.php</td><td>0.0002</td></tr><tr><td>tpl tpl_export_item_done.php</td><td>0.0002</td></tr></tbody></table><table class="profilerTable"><thead><tr><td>Label</td><td>Timing</td><td>Memory, Kb</td></tr></thead><tbody></tbody></table><br />memory peak = 8.9Mb<pre>FE.manageEvent("ajaxonload",function(event, target){
+  FE.loadEFilesJS([{id:[17656],path:"src/navi/js/jquery.autogrow-min.js?rnd=1513270088"},{id:[17658],path:"src/navi/js/jquery-deparam.js?rnd=1513270088"}]);$.browser.browserName = "Chrome"; $.browser.browserVersion = "66.0.3359.181";$.browser.isIPad = false;$.browser.isMobile = false;$.browser.isPhone = false;var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13316"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13316]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 24.05.2018 09:35:30  Дата формирования отчета: 24.05.2018 09:36:12"&gt;    Использование комплектов типовой документации (планирование)    &lt;div class="export_date"&gt;24.05.2018 09:36:12&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.00Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13316); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13316, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13276"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13276]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 23.05.2018 14:50:05  Дата формирования отчета: 23.05.2018 14:50:56"&gt;    Дерево контрактов. Статусная модель    &lt;div class="export_date"&gt;23.05.2018 14:50:56&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13276); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13276, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13136"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13136]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 11.05.2018 10:20:58  Дата формирования отчета: 11.05.2018 10:22:15"&gt;    Статистика по стандартизации    &lt;div class="export_date"&gt;11.05.2018 10:22:15&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.06Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13136); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13136, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13055"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13055]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 27.04.2018 12:01:39  Дата формирования отчета: 27.04.2018 12:02:50"&gt;    Использование комплектов типовой документации (планирование)    &lt;div class="export_date"&gt;27.04.2018 12:02:50&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.04Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13055); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13055, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13014"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13014]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 27.04.2018 12:01:10  Дата формирования отчета: 27.04.2018 12:02:05"&gt;    Статистика по стандартизации    &lt;div class="export_date"&gt;27.04.2018 12:02:05&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.06Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13014); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13014, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12936"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12936]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 11.04.2018 07:51:42  Дата формирования отчета: 11.04.2018 08:05:43"&gt;    Статистика по КПГЗ (отчет целиком)    &lt;div class="export_date"&gt;11.04.2018 08:05:43&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.09Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12936); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12936, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12907"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12907]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 11.04.2018 07:49:59  Дата формирования отчета: 11.04.2018 08:05:43"&gt;    Статистика администрирования заявок в разрезе дат с 01.01.2018 по 11.04.2018    &lt;div class="export_date"&gt;11.04.2018 08:05:43&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12907); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12907, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12903"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12903]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 10.04.2018 10:48:59  Дата формирования отчета: 10.04.2018 11:15:29"&gt;    Справка об администрировании заявок с 01.01.2018 по 10.04.2018    &lt;div class="export_date"&gt;10.04.2018 11:15:29&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12903); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12903, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12854"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12854]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 28.03.2018 09:56:10  Дата формирования отчета: 11.04.2018 08:05:37"&gt;    Дерево контрактов. Статусная модель. Количество Государственные контракты &gt; На этапе заключения - 3,0 (с объединением ячеек)    &lt;div class="export_date"&gt;11.04.2018 08:05:37&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12854); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12854, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12853"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12853]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 28.03.2018 09:53:59  Дата формирования отчета: 28.03.2018 09:55:41"&gt;    Дерево контрактов. Статусная модель. Количество Государственные контракты &gt; На этапе заключения &gt; Завершенные &gt; Расторгнутые - 1,0 (с объединением ячеек)    &lt;div class="export_date"&gt;28.03.2018 09:55:41&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12853); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12853, html);$("#exp_count_all").text(137);exportList.initProp();setTimeout(function() {exportList.checkItemStatus()}, 60000);
+});
+FE.manageEvent("ajaxloadcompleted",function(event, target){
+  navi.globalAdminUser = true;applyRound('#newname', '', '#E5E5E5');$('body').removeClass('ajax-onload'); ;detail.is_report= 1;navi.panelType = 'panel';new UIChooseOption("exp_clear_check[13316]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13316]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13316]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13276]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13276]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13276]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13136]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13136]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13136]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13055]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13055]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13055]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13014]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13014]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13014]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12936]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12936]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12936]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12907]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12907]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12907]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12903]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12903]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12903]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12854]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12854]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12854]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12853]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12853]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12853]"]').get(0));}).setNS("default");}})();
+});
+</pre></div></div><div id="d540852195"><div class="ajaxResultHeader" id="header540852195" onclick="toggleAjaxResult(this)">#540852195 | -&gt;: 12:42:33 | &lt;-: 12:42:33 | t: 0.745 s. | </div><div id="body540852195" class="ajaxResultBody hidden"><pre>Request to index.php</pre><hr noshade="" size="1" /><div><b>Response Headers</b><pre>pragma: no-cache
+date: Sat, 09 Jun 2018 07:42:33 GMT
+content-encoding: gzip
+accept-charset: windows-1251
+last-modified: Sat, 09 Jun 2018 07:42:33 GMT
+server: nginx
+x-powered-by: PHP/7.0.24
+vary: Accept-Encoding
+x-eaist-host: 172.17.48.155:80
+content-type: text/html; charset=windows-1251,text/html; charset=windows-1251
+cache-control: no-cache
+transfer-encoding: chunked
+connection: keep-alive
+web: 6
+expires: Sat, 09 Jun 2018 07:42:32 GMT
+</pre></div><hr noshade="" size="1" /><pre>set custom error handler</pre><pre>string(20) "Config is CoreConfig"
+</pre><pre>          new connect to ORACLE thanks to property data</pre><br /><b>Cached query</b><pre>string(11) "magic_files"
+</pre><pre>         Theme created </pre><pre>         adding func to onafterauth</pre><pre>         adding func to oncursoropen</pre><pre>         adding func to onafterlogout</pre><pre>         adding func to exportbeforeoutput</pre><pre>         adding func to onbeforeexecute</pre><pre>        starting loading modules</pre><pre>          loading modules/common/module.php</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onafterauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onbeforeauth</pre><pre>         adding func to onfinish</pre><pre>          handling onbeforeauth</pre><pre>          executing event onbeforeauth</pre><pre>         result of event onbeforeauth is: { "checkVariables": null, "setAllModules": null, "doAuthorizeByToken": false }</pre><pre>          handling onafterauth</pre><pre>          executing event onafterauth</pre><pre>          new connect to ORACLE thanks to property auth</pre><pre>         result of event onafterauth is: { "onAfterAuth": null, "checkAuthorizedExport": null }</pre><pre>          loaded Theme C:\inetpub\wwwroot\src/theme/theme.php</pre><pre>         Theme created </pre><pre>          loading modules/ui/module.php</pre><pre>          UI module loaded</pre><pre>          didnt add function</pre><pre>         adding func to onexactbeforeexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onafterexecute</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to onlogintpl</pre><pre>         adding func to initmodal</pre><pre>          inc dir C:\inetpub\wwwroot\modules/ui/classes/new</pre><pre>          loading modules/uitree/module.php</pre><pre>          loading modules/ui/module.php</pre><pre>          module modules/ui already loaded</pre><pre>          inc dir C:\inetpub\wwwroot\/modules/uitree/classes</pre><pre>          loading modules/datetimepicker/module.php</pre><pre>          DateTimePicker module loaded</pre><pre>          loading modules/mvc/module.php</pre><pre>          MVC template loaded</pre><pre>          handling initmodal</pre><pre>          executing event initmodal</pre><pre>         result of event initmodal is: { "initModal": null }</pre><pre>          loading modules/tree/module.php</pre><pre>          TreeSelectionModifier Create</pre><pre>          TreeSelectionModifier get from omg mode= 0 </pre><pre>          handling onbeforeexecute</pre><pre>          executing event onbeforeexecute</pre><pre>         result of event onbeforeexecute is: { "onBeforeExecute": null }</pre><pre>      Starting execute file src/navi/navi.php</pre><pre>          handling onexactbeforeexecute</pre><pre>          executing event onexactbeforeexecute</pre><pre>         result of event onexactbeforeexecute is: { "initStructAndTitle": null }</pre><pre>          loading modules/table_builder/module.php</pre><pre>          inc dir C:\inetpub\wwwroot\src/classes/models</pre><pre>          loading modules/desktop/module.php</pre><pre>          inc dir C:\inetpub\wwwroot\modules/desktop/classes</pre><pre>          loading modules/combobox/module.php</pre><pre>          Combos module loaded</pre><pre>          DESKTOP module loaded</pre><pre>          loading modules/olap/module.php</pre><pre>          OLAP module loaded</pre><pre>          handling initmodal</pre><pre>          executing event initmodal</pre><pre>         result of event initmodal is: { "initModal": null }</pre><pre>          loading modules/desktop/module.php</pre><pre>          module modules/desktop already loaded</pre><pre>          loading modules/embed/module.php</pre><pre>          loading modules/grid_form/module.php</pre><pre>          module modules/grid_form/module.php doesnt exists</pre><pre>          loading modules/grid_dev2/module.php</pre><pre>          Grid dev2 module loaded !</pre><pre>          loading modules/desktop/module.php</pre><pre>          module modules/desktop already loaded</pre><pre>          loading modules/olap/module.php</pre><pre>          module modules/olap already loaded</pre><pre>          loading modules/grid_form/module.php</pre><pre>          module modules/grid_form/module.php doesnt exists</pre><pre>          new connect to ORACLE thanks to property data_inp</pre><pre>          new connect to ORACLE thanks to property granit</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>        processed tpl C:\inetpub\wwwroot\src/theme/ui/t_checkbox.php</pre><pre>        processed tpl C:\inetpub\wwwroot\/src/navi/tpl/export/tpl_export_item_done.php</pre><pre>          handling onafterexecute</pre><pre>          executing event onafterexecute</pre><pre>         result of event onafterexecute is: { "checkUniqueCss": null, "checkColorTheme": null }</pre><pre>          handling onfinish</pre><pre>          executing event onfinish</pre><pre>         result of event onfinish is: { "stopTiming": null }</pre><pre>        Finish</pre><pre>      Processing extra Ajax incl files</pre><table class="queries-table"><tbody><tr><th style="width:20px">№</th><th>Text</th></tr><tr><td>1</td><td>data 0.002:<pre>select * from rep_core_config</pre><span></span></td></tr><tr><td>2</td><td>data 0.005:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=0
+                                                </span></td></tr><tr><td>3</td><td>data 0.015:<pre>          SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp,
+            TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME,
+            USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL
+          FROM CORE_ADMIN_MSK. T_USERS T
+          LEFT JOIN CORE_ADMIN_MSK. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID
+          LEFT JOIN CORE_ADMIN_MSK. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED
+          LEFT JOIN CORE_ADMIN_MSK. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED
+          WHERE S.USER_SESSION = 'fed8d4dd0f21e9277db802f6ddfde0d7' AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = 777</pre><span> <br />modified :  SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp, TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME, USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL FROM CORE_ADMIN_MSK. T_USERS T LEFT JOIN CORE_ADMIN_MSK. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID LEFT JOIN CORE_ADMIN_MSK. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED LEFT JOIN CORE_ADMIN_MSK. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED WHERE S.USER_SESSION = :x0 AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = :x1 </span></td></tr><tr><td>4</td><td>data 0.001:<pre>    begin /*update user id*/
+         DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+      end;</pre>
+<span>bound :id as INT 21=1
+                                                </span></td></tr><tr><td>5</td><td>auth 0.002:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>6</td><td>auth 0.001:<pre>SELECT user_session FROM t_users_sessions WHERE user_id = :USER_ID AND sys_id = :SYS_ID </pre><span>bound USER_ID as INT 21=1
+                bound SYS_ID as INT 21=777
+                </span></td></tr><tr><td>7</td><td>data 0.006:<pre>        SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG
+        FROM CORE_ADMIN_MSK. T_USERS_ROLES
+        LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1
+        UNION ALL
+        SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG
+        FROM CORE_ADMIN_MSK. V_USER_PRIVS
+        LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1</pre><span> <br />modified :  SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG FROM CORE_ADMIN_MSK. T_USERS_ROLES LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 UNION ALL SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG FROM CORE_ADMIN_MSK. V_USER_PRIVS LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 </span></td></tr><tr><td>8</td><td>auth 0.001:<pre>select * from T_SYS_BLOCK_STATUS where id in (select max(ID) from T_SYS_BLOCK_STATUS)</pre><span></span></td></tr><tr><td>9</td><td>data 0.009:<pre>          SELECT MENU_ID, NAME, SHOW, PARENT_ID, FILE_PATH, N_ORDER, HIDDEN,
+            ENABLED, SUBTITLE, MODULE,
+             R,
+             W
+          FROM MSK_EAIST_ANALYTIC.rep_core_menu RCM
+          LEFT JOIN (
+            SELECT MENU_ID m_id, MIN(R) AS R, MIN(
+              CASE WHEN R &gt; 0 THEN W ELSE 0 END
+            ) AS W
+            FROM CORE_ADMIN_MSK. V_USER_PRIVS VUP
+            LEFT JOIN CORE_ADMIN_MSK. T_MENU_PRIVS TMP ON TMP.PRIV_ID = VUP.PRIV_ID
+            WHERE VUP.USER_ID = 1 AND TMP.SYS_ID=777 AND
+              VUP.SYS_ID=777 AND NOT MENU_ID IS NULL
+            GROUP BY MENU_ID
+          ) S ON RCM.MENU_ID||'' = S.M_ID||''
+           WHERE R &gt; 0 AND ENABLED=1 
+          ORDER BY N_ORDER, NAME</pre><span></span></td></tr><tr><td>10</td><td>data_inp 0.004:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>11</td><td>data_inp 0.003:<pre>SELECT i.id, i.s_name FROM t_indicators i WHERE is_active = 1 AND  EXISTS (SELECT 1 FROM ref_indicators_groups r WHERE r.id_menu_gr= :id_gr AND r.id_ind = i.id )</pre><span>bound :id_gr as NULL
+                </span></td></tr><tr><td>12</td><td>data_inp 0.001:<pre>select id_source from REF_REPORTS_SOURCES ref where ref.ID_REPORT = :M_ID and ref.is_enable = 1 order by id_source</pre><span>bound M_ID as INT 21=6
+                </span></td></tr><tr><td>13</td><td>data_inp 0.001:<pre>SELECT
+	id
+FROM
+	t_versions
+WHERE
+	TRUNC(d_version) = :d</pre><span>bound d as SQLT_CHR good 09.06.2018 (10)
+                </span></td></tr><tr><td>14</td><td>granit 0.002:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good navi (4)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>15</td><td>granit 0.006:<pre>    BEGIN
+					set_eaist_context_value ( 'version_date', '09.06.2018' );
+				END;</pre>
+<span></span></td></tr><tr><td>16</td><td>data_inp 0.004:<pre>SELECT
+	COUNT(1) AS kol
+FROM
+	t_report_req
+WHERE
+	is_enabled = 1 AND
+	is_mail = 0 AND
+	id_user = :id_user </pre><span>bound id_user as INT 21=1
+                </span></td></tr><tr><td>17</td><td>data_inp 0.001:<pre>SELECT
+	t.*,
+	COUNT(1) OVER() AS visible_rows
+FROM
+(
+	SELECT
+		ROW_NUMBER() OVER(ORDER BY id DESC) AS rn,
+		id,
+		current_state,
+		filesize,
+		report_content,
+   		TO_CHAR(d_req, 'DD.MM.YYYY HH24:MI:SS') AS d_req,
+   		TO_CHAR(d_last, 'DD.MM.YYYY HH24:MI:SS') AS d_last,
+   		id_report,
+   		canceled,
+   		s_name
+	FROM
+		t_report_req
+	WHERE
+		is_enabled = 1 AND
+		is_mail = 0 AND
+		id_user = :id_user/* AND
+		downloaded = 0*/
+) t
+WHERE
+	(:id_req &gt; 0 AND :id_req = t.id) OR
+	t.rn BETWEEN :start_num_row AND :last_num_row</pre><span>bound id_user as INT 21=1
+                bound start_num_row as INT 21=1
+                bound last_num_row as INT 21=10
+                bound id_req as INT 21=0
+                </span></td></tr></tbody></table><table class="dbg_timingTable"><tbody><tr><th style="width:90px">Key</th><th>Time</th></tr><tr><td>output</td><td>0.6558</td></tr><tr><td>all</td><td>0.6491</td></tr><tr><td>debugMessage</td><td>0.0000</td></tr><tr><td>openDb_data</td><td>0.1137</td></tr><tr><td>exact openDb_data</td><td>0.1137</td></tr><tr><td>op query 1</td><td>0.0016</td></tr><tr><td>onafterauth</td><td>0.0000</td></tr><tr><td>oncursoropen</td><td>0.0000</td></tr><tr><td>onafterlogout</td><td>0.0000</td></tr><tr><td>exportbeforeoutput</td><td>0.0000</td></tr><tr><td>onbeforeexecute</td><td>0.0000</td></tr><tr><td>onbeforeauth</td><td>0.0000</td></tr><tr><td>onfinish</td><td>0.0000</td></tr><tr><td>CLIENT</td><td>0.0001</td></tr><tr><td>ex query 2</td><td>0.0053</td></tr><tr><td>op query 3</td><td>0.0151</td></tr><tr><td>ex query 4</td><td>0.0015</td></tr><tr><td>openDb_auth</td><td>0.1260</td></tr><tr><td>exact openDb_auth</td><td>0.1239</td></tr><tr><td>ex query 5</td><td>0.0020</td></tr><tr><td>op query 6</td><td>0.0010</td></tr><tr><td>op query 7</td><td>0.0065</td></tr><tr><td>op query 8</td><td>0.0013</td></tr><tr><td>onexactbeforeexecute</td><td>0.0000</td></tr><tr><td>onafterexecute</td><td>0.0000</td></tr><tr><td>onlogintpl</td><td>0.0000</td></tr><tr><td>initmodal</td><td>0.0000</td></tr><tr><td>building menu</td><td>0.0146</td></tr><tr><td>TreeSelectionModifier get</td><td>0.0000</td></tr><tr><td>getFromQuery a</td><td>0.0106</td></tr><tr><td>op query 9</td><td>0.0089</td></tr><tr><td>upd ch lvls</td><td>0.0000</td></tr><tr><td>openDb_data_inp</td><td>0.1251</td></tr><tr><td>exact openDb_data_inp</td><td>0.1213</td></tr><tr><td>ex query 10</td><td>0.0036</td></tr><tr><td>op query 11</td><td>0.0031</td></tr><tr><td>op query 12</td><td>0.0012</td></tr><tr><td>op query 13</td><td>0.0011</td></tr><tr><td>openDb_granit</td><td>0.1397</td></tr><tr><td>exact openDb_granit</td><td>0.1374</td></tr><tr><td>ex query 14</td><td>0.0022</td></tr><tr><td>ex query 15</td><td>0.0060</td></tr><tr><td>op query 16</td><td>0.0043</td></tr><tr><td>op query 17</td><td>0.0010</td></tr><tr><td>tpl ui/t_checkbox.php</td><td>0.0002</td></tr><tr><td>tpl tpl_export_item_done.php</td><td>0.0002</td></tr></tbody></table><table class="profilerTable"><thead><tr><td>Label</td><td>Timing</td><td>Memory, Kb</td></tr></thead><tbody></tbody></table><br />memory peak = 8.9Mb<pre>FE.manageEvent("ajaxonload",function(event, target){
+  FE.loadEFilesJS([]);$.browser.browserName = "Chrome"; $.browser.browserVersion = "66.0.3359.181";$.browser.isIPad = false;$.browser.isMobile = false;$.browser.isPhone = false;var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13316"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13316]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 24.05.2018 09:35:30  Дата формирования отчета: 24.05.2018 09:36:12"&gt;    Использование комплектов типовой документации (планирование)    &lt;div class="export_date"&gt;24.05.2018 09:36:12&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.00Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13316); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13316, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13276"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13276]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 23.05.2018 14:50:05  Дата формирования отчета: 23.05.2018 14:50:56"&gt;    Дерево контрактов. Статусная модель    &lt;div class="export_date"&gt;23.05.2018 14:50:56&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13276); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13276, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13136"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13136]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 11.05.2018 10:20:58  Дата формирования отчета: 11.05.2018 10:22:15"&gt;    Статистика по стандартизации    &lt;div class="export_date"&gt;11.05.2018 10:22:15&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.06Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13136); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13136, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13055"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13055]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 27.04.2018 12:01:39  Дата формирования отчета: 27.04.2018 12:02:50"&gt;    Использование комплектов типовой документации (планирование)    &lt;div class="export_date"&gt;27.04.2018 12:02:50&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.04Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13055); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13055, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-13014"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[13014]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 27.04.2018 12:01:10  Дата формирования отчета: 27.04.2018 12:02:05"&gt;    Статистика по стандартизации    &lt;div class="export_date"&gt;27.04.2018 12:02:05&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.06Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(13014); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(13014, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12936"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12936]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 11.04.2018 07:51:42  Дата формирования отчета: 11.04.2018 08:05:43"&gt;    Статистика по КПГЗ (отчет целиком)    &lt;div class="export_date"&gt;11.04.2018 08:05:43&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.09Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12936); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12936, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12907"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12907]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 11.04.2018 07:49:59  Дата формирования отчета: 11.04.2018 08:05:43"&gt;    Статистика администрирования заявок в разрезе дат с 01.01.2018 по 11.04.2018    &lt;div class="export_date"&gt;11.04.2018 08:05:43&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12907); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12907, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12903"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12903]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 10.04.2018 10:48:59  Дата формирования отчета: 10.04.2018 11:15:29"&gt;    Справка об администрировании заявок с 01.01.2018 по 10.04.2018    &lt;div class="export_date"&gt;10.04.2018 11:15:29&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12903); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12903, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12854"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12854]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 28.03.2018 09:56:10  Дата формирования отчета: 11.04.2018 08:05:37"&gt;    Дерево контрактов. Статусная модель. Количество Государственные контракты &gt; На этапе заключения - 3,0 (с объединением ячеек)    &lt;div class="export_date"&gt;11.04.2018 08:05:37&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12854); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12854, html);var html = $('&lt;div class="g_row export-list__item export-list__item--downloaded_false" id="js_queue-item-12853"&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;div class="ui-style-string  ui-checkbox c_chbox"&gt;    &lt;div id="cexp_clear_check[12853]" &gt;       &lt;div  class="btn "&gt;&lt;/div&gt;       &lt;span class="text-label" &gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;    &lt;/div&gt;  &lt;/div&gt;    &lt;div class="g_col col-count"&gt;        &lt;span class="export_count"&gt;&lt;/span&gt;    &lt;/div&gt;  &lt;div class="g_col export-report-name" title="Дата запроса отчета: 28.03.2018 09:53:59  Дата формирования отчета: 28.03.2018 09:55:41"&gt;    Дерево контрактов. Статусная модель. Количество Государственные контракты &gt; На этапе заключения &gt; Завершенные &gt; Расторгнутые - 1,0 (с объединением ячеек)    &lt;div class="export_date"&gt;28.03.2018 09:55:41&lt;/div&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min"&gt;    &lt;span class="export_proprs" status_report="1"&gt;0.01Mb&lt;/span&gt;  &lt;/div&gt;  &lt;div class="g_col g_col--min a_center"&gt;    &lt;span class="c_btn--ico c_btn--no-opacity" onclick="navi.downloadReport(12853); return false;" title="Скачать"&gt;&lt;i class="i_download--dark"&gt;&lt;/i&gt;&lt;/span&gt;  &lt;/div&gt;&lt;/div&gt;');exportList.reDrawItem(12853, html);$("#exp_count_all").text(137);exportList.initProp();setTimeout(function() {exportList.checkItemStatus()}, 60000);
+});
+FE.manageEvent("ajaxloadcompleted",function(event, target){
+  navi.globalAdminUser = true;applyRound('#newname', '', '#E5E5E5');$('body').removeClass('ajax-onload'); ;detail.is_report= 1;navi.panelType = 'panel';new UIChooseOption("exp_clear_check[13316]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13316]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13316]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13276]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13276]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13276]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13136]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13136]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13136]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13055]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13055]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13055]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[13014]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[13014]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[13014]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12936]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12936]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12936]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12907]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12907]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12907]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12903]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12903]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12903]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12854]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12854]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12854]"]').get(0));}).setNS("default");}})();new UIChooseOption("exp_clear_check[12853]", "", "", "", 0, 1);(function(){var vv = UIManager.get("exp_clear_check[12853]");    if (vv){    vv.manageEvent("click", function(id){exportList.checkOneEventHandler.call($('[id*="exp_clear_check[12853]"]').get(0));}).setNS("default");}})();
+});
+</pre></div></div></div><div id="unhandledAjax"></div></div></div>
+              <div id="debugQueriesCont" class="b-debug-messages hidden"><div class="dbg_header green">Выполненные запросы</div>  <div id="debugQueries" class="d-content"><table class="queries-table"><tbody><tr><th style="width:20px">№</th><th>Text</th></tr><tr><td>1</td><td>data 0.002:<pre>select * from rep_core_config</pre><span></span></td></tr><tr><td>2</td><td>data 0.016:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good KpgzSpgz (8)
+                                                bound :id as INT 21=0
+                                                </span></td></tr><tr><td>3</td><td>data 0.003:<pre>          SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp,
+            TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME,
+            USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL
+          FROM CORE_ADMIN_MSK. T_USERS T
+          LEFT JOIN CORE_ADMIN_MSK. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID
+          LEFT JOIN CORE_ADMIN_MSK. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED
+          LEFT JOIN CORE_ADMIN_MSK. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED
+          WHERE S.USER_SESSION = 'fed8d4dd0f21e9277db802f6ddfde0d7' AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = 777</pre><span> <br />modified :  SELECT  T.USER_ID, USER_EMAIL, USER_LOGIN,TS.IS_ENABLED SYS_ENABLED,  s.time_stamp, TRIM(TRIM(USER_SURNAME)||CASE WHEN USER_FIRSTNAME IS NOT NULL THEN ' '||SUBSTR(TRIM(USER_FIRSTNAME), 1, 1)||'.' ELSE '' END||CASE WHEN USER_PATRONAME IS NOT NULL THEN ''||SUBSTR(TRIM(USER_PATRONAME), 1, 1)||'.' ELSE '' END) USER_FIO, USER_PHONE, USER_ADDRESS,REGION_ID, USER_SURNAME, USER_FIRSTNAME, USER_PATRONAME, USER_HASH, IS_ACTIVE, ORG_ID, USER_EMAIL FROM CORE_ADMIN_MSK. T_USERS T LEFT JOIN CORE_ADMIN_MSK. T_USERS_SESSIONS S ON S.USER_ID = T.USER_ID LEFT JOIN CORE_ADMIN_MSK. T_USERS_SYSTEMS TUS ON TUS.USER_ID=T.USER_ID AND SYS_ID=TUS.SYSTEM_ID AND T.IS_ENABLED = TUS.IS_ENABLED LEFT JOIN CORE_ADMIN_MSK. T_SYSTEMS TS on TS.SYSTEM_ID=TUS.SYSTEM_ID AND TS.IS_ENABLED = TUS.IS_ENABLED WHERE S.USER_SESSION = :x0 AND T.IS_ENABLED = 1 AND IS_ACTIVE  = 1 AND TUS.SYSTEM_ID  = :x1 </span></td></tr><tr><td>4</td><td>data 0.002:<pre>    begin /*update user id*/
+         DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+      end;</pre>
+<span>bound :id as INT 21=1
+                                                </span></td></tr><tr><td>5</td><td>auth 0.004:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good KpgzSpgz (8)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>6</td><td>auth 0.002:<pre>SELECT user_session FROM t_users_sessions WHERE user_id = :USER_ID AND sys_id = :SYS_ID </pre><span>bound USER_ID as INT 21=1
+                bound SYS_ID as INT 21=777
+                </span></td></tr><tr><td>7</td><td>data 0.008:<pre>        SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG
+        FROM CORE_ADMIN_MSK. T_USERS_ROLES
+        LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1
+        UNION ALL
+        SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG
+        FROM CORE_ADMIN_MSK. V_USER_PRIVS
+        LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1</pre><span> <br />modified :  SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG FROM CORE_ADMIN_MSK. T_USERS_ROLES LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 UNION ALL SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG FROM CORE_ADMIN_MSK. V_USER_PRIVS LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 </span></td></tr><tr><td>8</td><td>auth 0.003:<pre>select * from T_SYS_BLOCK_STATUS where id in (select max(ID) from T_SYS_BLOCK_STATUS)</pre><span></span></td></tr><tr><td>9</td><td>data 0.009:<pre>          SELECT MENU_ID, NAME, SHOW, PARENT_ID, FILE_PATH, N_ORDER, HIDDEN,
+            ENABLED, SUBTITLE, MODULE,
+             R,
+             W
+          FROM MSK_EAIST_ANALYTIC.rep_core_menu RCM
+          LEFT JOIN (
+            SELECT MENU_ID m_id, MIN(R) AS R, MIN(
+              CASE WHEN R &gt; 0 THEN W ELSE 0 END
+            ) AS W
+            FROM CORE_ADMIN_MSK. V_USER_PRIVS VUP
+            LEFT JOIN CORE_ADMIN_MSK. T_MENU_PRIVS TMP ON TMP.PRIV_ID = VUP.PRIV_ID
+            WHERE VUP.USER_ID = 1 AND TMP.SYS_ID=777 AND
+              VUP.SYS_ID=777 AND NOT MENU_ID IS NULL
+            GROUP BY MENU_ID
+          ) S ON RCM.MENU_ID||'' = S.M_ID||''
+           WHERE R &gt; 0 AND ENABLED=1 
+          ORDER BY N_ORDER, NAME</pre><span></span></td></tr><tr><td>10</td><td>data_inp 0.003:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good KpgzSpgz (8)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>11</td><td>data_inp 0.002:<pre>SELECT i.id, i.s_name FROM t_indicators i WHERE is_active = 1 AND  EXISTS (SELECT 1 FROM ref_indicators_groups r WHERE r.id_menu_gr= :id_gr AND r.id_ind = i.id )</pre><span>bound :id_gr as NULL
+                </span></td></tr><tr><td>12</td><td>data_inp 0.003:<pre>select id_source from REF_REPORTS_SOURCES ref where ref.ID_REPORT = :M_ID and ref.is_enable = 1 order by id_source</pre><span>bound M_ID as INT 21=1503
+                </span></td></tr><tr><td>13</td><td>data_inp 0.003:<pre>SELECT
+	id
+FROM
+	t_versions
+WHERE
+	TRUNC(d_version) = TO_DATE(:d , 'DD.MM.YYYY')</pre><span>bound d as SQLT_CHR good 09.06.2018 (10)
+                </span></td></tr><tr><td>14</td><td>granit 0.002:<pre>    begin /*session tuning*/
+                        execute immediate 'alter session set nls_numeric_characters = ''.,''';
+                        execute immediate 'alter session set nls_date_format = ''DD.MM.YYYY''';
+                        dbms_application_info.set_module( :name , :show );
+                        DBMS_SESSION.SET_CONTEXT('CLIENTCONTEXT','USER_ID', :id);
+                        end;</pre>
+<span>bound :name as SQLT_CHR good ЕАИСТ 2. Аналитика (18)
+                                                bound :show as SQLT_CHR good KpgzSpgz (8)
+                                                bound :id as INT 21=1
+                                                </span></td></tr><tr><td>15</td><td>granit 0.001:<pre>    BEGIN
+					set_eaist_context_value ( 'version_date', '09.06.2018' );
+				END;</pre>
+<span></span></td></tr><tr><td>16</td><td>data 0.005:<pre>SELECT
+					m.name,
+					m.show,
+					m.menu_id,
+					m.subtitle,
+					m.ext,
+					m.class_name
+				FROM
+					rep_core_menu m
+				WHERE
+					m.enabled = 1 AND
+					m.hidden &lt;&gt; 1 AND
+					m.parent_id = :par_id AND
+					EXISTS
+					(
+						SELECT
+							1
+						FROM
+							MSK_EAIST_ANALITYC_DATA.REF_REPORTS_SOURCES ref
+						WHERE
+							ref.id_report = m.menu_id AND
+							ref.is_enable = 1
+					)
+				ORDER BY
+					n_order</pre><span>bound par_id as INT 21=1503
+                </span></td></tr><tr><td>17</td><td>data_inp 0.003:<pre>select count(s.id) cnt from T_SUBSCRIPTION_REPORT s
+            left join T_REPORT_REQ t on t.id=s.ID_REQUEST
+            where s.is_enabled=1 and t.is_enabled=1 and t.id_user= :id_user </pre><span>bound id_user as INT 21=1
+                </span></td></tr><tr><td>18</td><td>data_inp 0.007:<pre>SELECT
+	COUNT(1) AS kol
+FROM
+	t_report_req
+WHERE
+	is_enabled = 1 AND
+	is_mail = 0 AND
+	id_user = :id_user </pre><span>bound id_user as INT 21=1
+                </span></td></tr><tr><td>19</td><td>data_inp 0.002:<pre>SELECT
+	*
+FROM
+(
+	SELECT
+		ROW_NUMBER() OVER(ORDER BY id DESC) AS rn,
+		id,
+		current_state,
+		filesize,
+		report_content,
+		TO_CHAR(d_req, 'DD.MM.YYYY HH24:MI:SS') AS d_req,
+		TO_CHAR(d_last, 'DD.MM.YYYY HH24:MI:SS') AS d_last,
+		id_report,
+		downloaded,
+		canceled,
+		s_name
+	FROM
+		T_REPORT_REQ
+	WHERE
+		is_enabled = 1 AND
+		is_mail = 0 AND
+		id_user = :id_user
+)
+WHERE
+	rn BETWEEN :start_num_row AND :last_num_row</pre><span>bound id_user as INT 21=1
+                bound start_num_row as INT 21=1
+                bound last_num_row as INT 21=10
+                </span></td></tr><tr><td>20</td><td>data 0.004:<pre>        SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG
+        FROM CORE_ADMIN_MSK. T_USERS_ROLES
+        LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1
+        UNION ALL
+        SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG
+        FROM CORE_ADMIN_MSK. V_USER_PRIVS
+        LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID)
+        WHERE SYS_ID= 777 AND USER_ID= 1 AND IS_ENABLED= 1</pre><span> <br />modified :  SELECT ROLE_NAME as NAME, ROLE_ID ID,'ROLE' FLAG FROM CORE_ADMIN_MSK. T_USERS_ROLES LEFT JOIN CORE_ADMIN_MSK. T_ROLES USING(ROLE_ID,SYS_ID,IS_ENABLED) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 UNION ALL SELECT PRIV_NAME as NAME,PRIV_ID ID, 'PRIV' FLAG FROM CORE_ADMIN_MSK. V_USER_PRIVS LEFT JOIN  CORE_ADMIN_MSK. T_PRIVS USING(SYS_ID,PRIV_ID) WHERE SYS_ID= :x2 AND USER_ID= :x0 AND IS_ENABLED= :x0 </span></td></tr><tr><td>21</td><td>auth 0.002:<pre>SELECT priv_id, menu_id FROM t_menu_privs</pre><span></span></td></tr><tr><td>22</td><td>data_inp 0.001:<pre>select count(s.id) cnt from T_SUBSCRIPTION_REPORT s
+            left join T_REPORT_REQ t on t.id=s.ID_REQUEST
+            where s.is_enabled=1 and t.is_enabled=1 and t.id_user= :id_user </pre><span>bound id_user as INT 21=1
+                </span></td></tr></tbody></table></div></div>
+              <div id="debugTimingCont" class="b-debug-messages hidden"><div class="dbg_header blue">Распределение времени</div> <div id="debugTiming" class="d-content"><table class="dbg_timingTable"><tbody><tr><th style="width:90px">Key</th><th>Time</th></tr><tr><td>output</td><td>0.6627</td></tr><tr><td>all</td><td>0.6351</td></tr><tr><td>debugMessage</td><td>0.0000</td></tr><tr><td>openDb_data</td><td>0.1156</td></tr><tr><td>exact openDb_data</td><td>0.1156</td></tr><tr><td>op query 1</td><td>0.0015</td></tr><tr><td>onafterauth</td><td>0.0000</td></tr><tr><td>oncursoropen</td><td>0.0000</td></tr><tr><td>onafterlogout</td><td>0.0000</td></tr><tr><td>exportbeforeoutput</td><td>0.0000</td></tr><tr><td>onbeforeexecute</td><td>0.0000</td></tr><tr><td>onbeforeauth</td><td>0.0000</td></tr><tr><td>onfinish</td><td>0.0000</td></tr><tr><td>CLIENT</td><td>0.0001</td></tr><tr><td>ex query 2</td><td>0.0155</td></tr><tr><td>op query 3</td><td>0.0035</td></tr><tr><td>ex query 4</td><td>0.0019</td></tr><tr><td>openDb_auth</td><td>0.1176</td></tr><tr><td>exact openDb_auth</td><td>0.1137</td></tr><tr><td>ex query 5</td><td>0.0039</td></tr><tr><td>op query 6</td><td>0.0020</td></tr><tr><td>op query 7</td><td>0.0079</td></tr><tr><td>op query 8</td><td>0.0029</td></tr><tr><td>onexactbeforeexecute</td><td>0.0000</td></tr><tr><td>onafterexecute</td><td>0.0000</td></tr><tr><td>onlogintpl</td><td>0.0000</td></tr><tr><td>initmodal</td><td>0.0000</td></tr><tr><td>building menu</td><td>0.0146</td></tr><tr><td>TreeSelectionModifier get</td><td>0.0000</td></tr><tr><td>getFromQuery a</td><td>0.0107</td></tr><tr><td>op query 9</td><td>0.0090</td></tr><tr><td>upd ch lvls</td><td>0.0000</td></tr><tr><td>openDb_data_inp</td><td>0.1045</td></tr><tr><td>exact openDb_data_inp</td><td>0.1009</td></tr><tr><td>ex query 10</td><td>0.0035</td></tr><tr><td>op query 11</td><td>0.0021</td></tr><tr><td>op query 12</td><td>0.0029</td></tr><tr><td>op query 13</td><td>0.0029</td></tr><tr><td>openDb_granit</td><td>0.1162</td></tr><tr><td>exact openDb_granit</td><td>0.1137</td></tr><tr><td>ex query 14</td><td>0.0024</td></tr><tr><td>ex query 15</td><td>0.0012</td></tr><tr><td>showPage___</td><td>0.0545</td></tr><tr><td>tpl tpl_page.php</td><td>0.0158</td></tr><tr><td>op query 16</td><td>0.0054</td></tr><tr><td>tpl systemLayout/tpl_leftSideBlockMenu.php</td><td>0.0003</td></tr><tr><td>op query 17</td><td>0.0029</td></tr><tr><td>treeGetJSON t_print</td><td>0.0000</td></tr><tr><td>tpl ui/t_combo.php</td><td>0.0003</td></tr><tr><td>tpl ui/t_checkbox.php</td><td>0.0002</td></tr><tr><td>tpl ui/calendarbox.php</td><td>0.0001</td></tr><tr><td>tpl tpl/calendarbox.php</td><td>0.0002</td></tr><tr><td>op query 18</td><td>0.0065</td></tr><tr><td>op query 19</td><td>0.0021</td></tr><tr><td>tpl tpl_export_item_done.php</td><td>0.0002</td></tr><tr><td>tpl tpl_queue_list.php</td><td>0.0002</td></tr><tr><td>tpl tpl_export_panel.php</td><td>0.0002</td></tr><tr><td>tpl tpl_export.php</td><td>0.0002</td></tr><tr><td>op query 20</td><td>0.0035</td></tr><tr><td>op query 21</td><td>0.0020</td></tr><tr><td>tpl systemLayout/tpl_menu_item.php</td><td>0.0002</td></tr><tr><td>tpl systemLayout/tpl_menu.php</td><td>0.0002</td></tr><tr><td>op query 22</td><td>0.0012</td></tr><tr><td>tpl layout/title_no_content.php</td><td>0.0003</td></tr><tr><td>tpl theme_files/msk_arm2/layout/title_no_content.php</td><td>0.0000</td></tr></tbody></table><br />memory peak = 8.9Mb</div></div>
+              <div id="debugErrorsCont" class="b-debug-messages hidden"><div class="dbg_header vred">Ошибки <span onclick="clearErrorsResults()" style="color:black; font-size:11px">Очистить</span></div>                <div id="debugErrors" class="d-content"></div></div>
+              
+            </div>
+
+        <!--script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+                        google.load('visualization', '1.0', {'packages': ['corechart']});
+        </script-->
+    
+<div id="ui_combo_bodies_all"><div id="cmbBody_c_print" class="ui-cmb-body  ui-cmb-body-hidden" style="width: 200px; height: 125px;">
+    <div class="ui-cmb-left-top"></div>
+    <div class="ui-cmb-right-top"></div>
+    <div class="ui-cmb-left-bot"></div>
+    <div class="ui-cmb-right-bot"></div>
+    <div class="ui-cmb-content-container" style="height:121px">
+        <div class="ui-cmb-pre-content">
+            <div class="ui-cmb-scrollable" id="cmbBody_c_print_content"><div><div id="ct_print" class="ui-tree ui-singleselect ui-tree-foldable" tabindex="-1"><div class="ui-tree-inner"><div class="tree-scroller"><ul id="tree_ul_t_print" class=""><li id="lt_print_1" class="ui-lvl-1">XLSX</li><li id="lt_print_2" class="ui-lvl-1">PDF</li><li id="lt_print_3" class="ui-lvl-1">HTML</li><li id="lt_print_4" class="ui-lvl-1">CSV</li></ul><ul class="tree-render-container"></ul><div class="ui-tree-sc" style="display: none;"><div></div></div></div></div><div class="onload-overlay" style=""><table class="loadingAjax undefined smallLoad"><tbody><tr><td><div class="loader"></div><span id="loadTimeroverlay-t_printText"></span><span class="loader-timer" id="loadTimeroverlay-t_print" value="-1">01:29</span></td></tr></tbody></table></div><input class="ui-key-handler" id="input_handler_t_print" type="text" readonly="true" /></div></div></div>
+        </div>
+    </div>
+
+
+</div></div></body></html>
