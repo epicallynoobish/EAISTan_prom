@@ -26,11 +26,7 @@
     		<artifactId>cucumber-java8</artifactId>
    			<version>2.3.1</version>
 		</dependency>
-	    <dependency>
-	    	<groupId>junit</groupId>
-	    	<artifactId>junit</artifactId>
-	    	</dependency>
-	    		<dependency>
+   		<dependency>
     	<groupId>io.cucumber</groupId>
     		<artifactId>cucumber-junit</artifactId>
     		<version>2.0.0</version>
