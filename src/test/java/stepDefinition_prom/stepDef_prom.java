@@ -16,14 +16,32 @@ public class stepDef_prom
         //WebDriver driver = new ChromeDriver();
 		//open("http://eaistan-dev.proitr.ru/index.php");
         Thread.sleep(10000);
-        if($("#auth_user_name").is(visible))
+        boolean flag = false;
+        int f = 0;
+        
+        try {
+			do
+			if($("#auth_user_name").is(visible))
+			{
+				$("#auth_user_name").sendKeys("demo");
+				$("#auth_user_password").sendKeys("reptilian");
+				$(".enter_btn").click();
+				$(".c_header").waitUntil(visible, 5000);
+				$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
+				flag = true;
+			}
+			else 
+			{
+				System.out.println ("Не смог авторизоваться. Пробуем снова...");
+			}
+			while (flag==false || f==10);
+		} 
+        catch (Exception e) 
         {
-            $("#auth_user_name").sendKeys("demo");
-            $("#auth_user_password").sendKeys("reptilian");
-            $(".enter_btn").click();
-            $(".c_header").waitUntil(visible, 5000);
-            $(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
-        }
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
     }
 
 	@When("^I go to \"([^\"]*)\"$")
