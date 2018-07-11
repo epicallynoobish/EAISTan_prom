@@ -15,7 +15,7 @@ public class stepDef_prom
 	{
         //WebDriver driver = new ChromeDriver();
 		//open("http://eaistan-dev.proitr.ru/index.php");
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         if($("#auth_user_name").is(visible))
         {
             $("#auth_user_name").sendKeys("demo");
