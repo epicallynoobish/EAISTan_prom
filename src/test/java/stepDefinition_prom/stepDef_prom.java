@@ -21,7 +21,7 @@ public class stepDef_prom
         
         try {
 			do
-			if($("#auth_user_name").is(visible))
+			if($("#auth_user_name").is(exist))
 			{
 				$("#auth_user_name").sendKeys("demo");
 				$("#auth_user_password").sendKeys("reptilian");
