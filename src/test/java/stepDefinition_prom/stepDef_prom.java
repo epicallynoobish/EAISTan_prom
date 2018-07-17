@@ -18,17 +18,18 @@ public class stepDef_prom
         Thread.sleep(10000);
         boolean flag = false;
         int f = 0;
-        
+        System.out.println ("READY!");
         try 
         {
 			do
 			{
 				System.out.printf ("Попытка авторизации номер", f+1);
-				if($("#auth_user_name").is(exist))
+				if($("#auth_user_name").is(visible))
 				{
 					$("#auth_user_name").sendKeys("demo");
 					$("#auth_user_password").sendKeys("reptilian");
 					$(".enter_btn").click();
+					System.out.println ("ЖМЯК!");
 					$(".c_header").waitUntil(visible, 5000);
 					$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
 					flag = true;
