@@ -19,20 +19,24 @@ public class stepDef_prom
         boolean flag = false;
         int f = 0;
         
-        try {
+        try 
+        {
 			do
-			if($("#auth_user_name").is(exist))
 			{
-				$("#auth_user_name").sendKeys("demo");
-				$("#auth_user_password").sendKeys("reptilian");
-				$(".enter_btn").click();
-				$(".c_header").waitUntil(visible, 5000);
-				$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
-				flag = true;
-			}
-			else 
-			{
-				System.out.println ("Не смог авторизоваться. Пробуем снова...");
+				System.out.printf ("Попытка авторизации номер", f+1);
+				if($("#auth_user_name").is(exist))
+				{
+					$("#auth_user_name").sendKeys("demo");
+					$("#auth_user_password").sendKeys("reptilian");
+					$(".enter_btn").click();
+					$(".c_header").waitUntil(visible, 5000);
+					$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
+					flag = true;
+				}
+				else 
+				{
+					System.out.println ("Не смог авторизоваться. Пробуем снова...");
+				}
 			}
 			while (flag==false || f==10);
 		} 
