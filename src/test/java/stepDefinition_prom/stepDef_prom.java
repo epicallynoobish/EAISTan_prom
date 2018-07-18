@@ -30,7 +30,7 @@ public class stepDef_prom
 					$("#auth_user_password").sendKeys("reptilian");
 					$(".enter_btn").click();
 					System.out.println ("ЖМЯК!");
-					$(".c_header").waitUntil(visible, 5000);
+					$(".c_header").waitUntil(visible, 9000);
 					$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
 					flag = true;
 				}
