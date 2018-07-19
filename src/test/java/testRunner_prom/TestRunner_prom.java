@@ -4,6 +4,9 @@ import static com.codeborne.selenide.Selenide.open;
 
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import com.codeborne.selenide.Configuration;
 
@@ -38,8 +41,11 @@ public class TestRunner_prom
     {
         Configuration.timeout = 90000;
         System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe"); //--enable-logging --v=1
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("headless", "disable-gpu", "enable-logging", "v=1");
+        @SuppressWarnings("unused")
+		WebDriver driver = new ChromeDriver(chromeOptions);
         Configuration.browser = "chrome";
-        Configuration.chromeSwitches = "--enable-logging --v=1";
         open("http://eaist.mos.ru/analytics/index.php");
     }
 }
