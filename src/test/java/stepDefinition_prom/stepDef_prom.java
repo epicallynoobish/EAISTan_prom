@@ -16,38 +16,14 @@ public class stepDef_prom
         //WebDriver driver = new ChromeDriver();
 		//open("http://eaistan-dev.proitr.ru/index.php");
         Thread.sleep(10000);
-        boolean flag = false;
-        int f = 0;
-        System.out.println ("READY!");
-        try 
-        {
-			do
-			{
-				System.out.printf ("Попытка авторизации номер", f+1);
-				if($("#auth_user_name").is(visible))
-				{
-					$("#auth_user_name").sendKeys("demo");
-					$("#auth_user_password").sendKeys("reptilian");
-					$(".enter_btn").click();
-					System.out.println ("ЖМЯК!");
-					$(".c_header").waitUntil(visible, 9000);
-					$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
-					flag = true;
-				}
-				else 
-				{
-					System.out.println ("Не смог авторизоваться. Пробуем снова...");
-				}
-			}
-			while (flag==false || f==10);
-		} 
-        catch (Exception e) 
-        {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        
-    }
+        $("#auth_user_name").is(visible);
+		$("#auth_user_name").sendKeys("demo");
+		$("#auth_user_password").sendKeys("reptilian");
+		$(".enter_btn").click();
+		$(".c_header").waitUntil(visible, 9000);
+		$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
+	}
+
 
 	@When("^I go to \"([^\"]*)\"$")
 	public void i_go_to(String table) throws Exception

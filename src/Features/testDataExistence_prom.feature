@@ -4,7 +4,6 @@ Feature: Test data existance_prom
   Background:
     Given I login as demo with password reptilian with name Иванов О.З.
 
-  @tag2
   Scenario Outline: Test data existance outline
     When I go to <table>
     When I checking the table
