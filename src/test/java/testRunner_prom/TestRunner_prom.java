@@ -42,7 +42,7 @@ public class TestRunner_prom
         Configuration.timeout = 90000;
         System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe"); //--enable-logging --v=1
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("headless", "disable-gpu", "enable-logging", "v=1");
+        chromeOptions.addArguments("enable-logging", "v=1");
         @SuppressWarnings("unused")
 		WebDriver driver = new ChromeDriver(chromeOptions);
         Configuration.browser = "chrome";
