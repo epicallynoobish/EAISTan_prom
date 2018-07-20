@@ -40,12 +40,11 @@ public class TestRunner_prom
     static public void setupTimeout()
     {
         Configuration.timeout = 90000;
-        System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe"); //--enable-logging --v=1
+        Configuration.browser = "chrome";
+        System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("enable-logging", "v=1");
-        @SuppressWarnings("unused")
-		WebDriver driver = new ChromeDriver(chromeOptions);
-        Configuration.browser = "chrome";
+		//WebDriver driver = new ChromeDriver(chromeOptions);
         open("http://eaist.mos.ru/analytics/index.php");
     }
 }
