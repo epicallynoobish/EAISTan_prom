@@ -6,3 +6,12 @@
 [0705/195254.308:ERROR:file_io_win.cc(161)] CreateFile C:\Users\starikov\AppData\Local\Temp\scoped_dir7884_628\Crashpad\settings.dat: Системе не удается найти указанный путь. (0x3)
 [0705/195254.383:ERROR:file_io_win.cc(170)] CreateFile C:\Users\starikov\AppData\Local\Temp\scoped_dir7884_628\Crashpad\reports\ebafa751-19d6-400c-a424-941192345114.dmp: Системе не удается найти указанный путь. (0x3)
 [0705/195254.383:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0723/181623.408:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0723/182512.420:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0724/012611.319:ERROR:file_io_win.cc(161)] CreateFile C:\Users\starikov\AppData\Local\Temp\scoped_dir6996_1931\Crashpad\settings.dat: Системе не удается найти указанный путь. (0x3)
+[0724/012614.518:ERROR:file_io_win.cc(170)] CreateFile C:\Users\starikov\AppData\Local\Temp\scoped_dir6996_1931\Crashpad\reports\37c82811-bb57-4bb4-8301-368a351bc23a.dmp: Системе не удается найти указанный путь. (0x3)
+[0724/012614.518:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0724/022803.065:ERROR:file_io_win.cc(161)] CreateFile C:\Users\starikov\AppData\Local\Temp\scoped_dir10080_6745\Crashpad\settings.dat: Системе не удается найти указанный путь. (0x3)
+[0724/022805.079:ERROR:file_io_win.cc(170)] CreateFile C:\Users\starikov\AppData\Local\Temp\scoped_dir10080_6745\Crashpad\reports\e0d6e233-061a-46d3-9953-4561be66a25c.dmp: Системе не удается найти указанный путь. (0x3)
+[0724/022805.079:ERROR:crash_report_exception_handler.cc(97)] PrepareNewCrashReport failed
+[0724/151312.593:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
