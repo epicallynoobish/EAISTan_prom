@@ -43,59 +43,31 @@ public class DriverUtil {
      * @param capabilities
      * @return
      */
-    private static WebDriver chooseDriver(DesiredCapabilities capabilities) {
-		String preferredDriver = System.getProperty("browser", "chrome");
-		//boolean headless = System.getProperty("Headless", "true").equals("true");
-		
-		switch (preferredDriver.toLowerCase()) {
-			case "chrome":
-				final ChromeOptions chromeOptions = new ChromeOptions();
-				/*if (headless) {
-					chromeOptions.addArguments("--headless");
-				}*/
-				capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-				System.out.println("********************* before driver created");
-				ChromeDriver driver = new ChromeDriver();
-				System.out.println("********************* after driver created");
-				ErrorHandler handler = new ErrorHandler();
-				handler.setIncludeServerErrors(false);
-				driver.setErrorHandler(handler);
-				return driver;
-			/*case "phantomjs":
-				return new PhantomJSDriver(capabilities);*/
-			default:
-				/*//return new PhantomJSDriver(capabilities);
-				FirefoxOptions options = new FirefoxOptions();
-				//capabilities.s
-				if (headless) {
-					options.addArguments("-headless", "-safe-mode");
-				}
-				capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
-				final FirefoxDriver firefox = new FirefoxDriver();
-				return firefox;*/
-				final ChromeOptions chromeOptionsDef = new ChromeOptions();
-				/*if (headless) {
-					chromeOptionsDef.addArguments("--headless");
-				}*/
-				capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptionsDef);
-				System.out.println("********************* before driver created");
-				ChromeDriver driverDef = new ChromeDriver();
-				System.out.println("********************* after driver created");
-				ErrorHandler handlerDef = new ErrorHandler();
-				handlerDef.setIncludeServerErrors(false);
-				driverDef.setErrorHandler(handlerDef);
-				return driverDef;
-		}
+    private static WebDriver chooseDriver(DesiredCapabilities capabilities) 
+    {
+    	final ChromeOptions chromeOptions = new ChromeOptions();
+		/*if (headless) {
+			chromeOptions.addArguments("--headless");
+			}*/
+		capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		System.out.println("********************* before driver created");
+		ChromeDriver driver = new ChromeDriver();
+		System.out.println("********************* after driver created");
+		ErrorHandler handler = new ErrorHandler();
+		handler.setIncludeServerErrors(false);
+		driver.setErrorHandler(handler);
+		return driver;
     }
 
-    public static WebElement waitAndGetElementByCssSelector(WebDriver driver, String selector,
-                                                            int seconds) {
+    public static WebElement waitAndGetElementByCssSelector(WebDriver driver, String selector, int seconds) 
+    {
         By selection = By.cssSelector(selector);
         return (new WebDriverWait(driver, seconds)).until( // ensure element is visible!
                 ExpectedConditions.visibilityOfElementLocated(selection));
     }
 
-	public static void closeDriver() {
+	public static void closeDriver() 
+	{
 		if (driver != null) {
 			try {
 				driver.close();
