@@ -9,18 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
+//import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.ErrorHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by tom on 24/02/17.
- * https://github.com/selenium-cucumber/selenium-cucumber-java/blob/master/src/main/java/env/DriverUtil.java
- */
 public class DriverUtil {
     public static long DEFAULT_WAIT = 20;
     protected static WebDriver driver;
@@ -32,7 +26,7 @@ public class DriverUtil {
         //System.setProperty("webdriver.chrome.driver", "webdrivers/chromedriver.exe");
         //System.setProperty("webdriver.gecko.driver", "./geckodriver");
         DesiredCapabilities capabilities = null;
-		capabilities = DesiredCapabilities.firefox();
+		capabilities = DesiredCapabilities.chrome();
         capabilities.setJavascriptEnabled(true);
         capabilities.setCapability("takesScreenshot", true);
         driver = chooseDriver(capabilities);
@@ -51,14 +45,14 @@ public class DriverUtil {
      */
     private static WebDriver chooseDriver(DesiredCapabilities capabilities) {
 		String preferredDriver = System.getProperty("browser", "chrome");
-		boolean headless = System.getProperty("Headless", "false").equals("true");
+		//boolean headless = System.getProperty("Headless", "true").equals("true");
 		
 		switch (preferredDriver.toLowerCase()) {
 			case "chrome":
 				final ChromeOptions chromeOptions = new ChromeOptions();
-				if (headless) {
+				/*if (headless) {
 					chromeOptions.addArguments("--headless");
-				}
+				}*/
 				capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 				System.out.println("********************* before driver created");
 				ChromeDriver driver = new ChromeDriver();
@@ -67,10 +61,10 @@ public class DriverUtil {
 				handler.setIncludeServerErrors(false);
 				driver.setErrorHandler(handler);
 				return driver;
-			case "phantomjs":
-				return new PhantomJSDriver(capabilities);
+			/*case "phantomjs":
+				return new PhantomJSDriver(capabilities);*/
 			default:
-				//return new PhantomJSDriver(capabilities);
+				/*//return new PhantomJSDriver(capabilities);
 				FirefoxOptions options = new FirefoxOptions();
 				//capabilities.s
 				if (headless) {
@@ -78,7 +72,19 @@ public class DriverUtil {
 				}
 				capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
 				final FirefoxDriver firefox = new FirefoxDriver();
-				return firefox;
+				return firefox;*/
+				final ChromeOptions chromeOptionsDef = new ChromeOptions();
+				/*if (headless) {
+					chromeOptionsDef.addArguments("--headless");
+				}*/
+				capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptionsDef);
+				System.out.println("********************* before driver created");
+				ChromeDriver driverDef = new ChromeDriver();
+				System.out.println("********************* after driver created");
+				ErrorHandler handlerDef = new ErrorHandler();
+				handlerDef.setIncludeServerErrors(false);
+				driverDef.setErrorHandler(handlerDef);
+				return driverDef;
 		}
     }
 

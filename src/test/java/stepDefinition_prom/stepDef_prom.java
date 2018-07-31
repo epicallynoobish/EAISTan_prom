@@ -6,33 +6,35 @@ import static com.codeborne.selenide.Selenide.$;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assume;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 
-import cucumber.api.java.Before;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import env.DriverUtil;
-//import info.seleniumcucumber.methods.BaseTest;
 
 public class stepDef_prom 
 {
-	//static public final WebDriver driver = new ChromeDriver();
-	protected static WebDriver driver = DriverUtil.getDefaultDriver();
 	@Before
-    static public void setupTimeout()
-    {
-        //Configuration.browser = "chrome";
-        //System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
-        //ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.addArguments("enable-logging", "v=1");
-    }
+	public void SysOptions()
+	{
+		//ChromeOptions options = new ChromeOptions();
+		System.setProperty("webdriver.chrome.logfile", "D:\\chromedriver.log");
+		System.setProperty("webdriver.chrome.verboseLogging", "true");
+		//System.setProperty("browser", "chrome");
+		//System.setProperty("headless", "true");
+	}
+	
+	protected static WebDriver driver = DriverUtil.getDefaultDriver();
+	//protected static WebDriver driver = new ChromeDriver(options);
+	
 	/*@Given("^I login as demo with password reptilian with name Иванов О\\.З\\.$")
 	public void i_login_as_demo_with_password_reptilian_with_name_Иванов_О_З() throws Exception
 	{
@@ -48,7 +50,6 @@ public class stepDef_prom
 		$(".c_header").waitUntil(visible, 9000);
 		$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
 	}
-
 
 	@When("^I go to \"([^\"]*)\"$")
 	public void i_go_to(String table) throws Exception
@@ -67,17 +68,18 @@ public class stepDef_prom
 	{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		System.out.println(url);
+		System.out.printf("opening " + url + System.getProperty("line.separator"));
 		driver.get(url);
 
         (new WebDriverWait(driver, 60))
         	.until(ExpectedConditions.presenceOfElementLocated(By.id("auth_user_name")));
-        System.out.println(url);
+        System.out.printf("got " + url + System.getProperty("line.separator"));
+        Selenide.refresh();
         //Assume.assumeFalse($("#auth_user_name").isDisplayed());
         //driver.findElement(By.id("#auth_user_name")).getClass();
         Assume.assumeNotNull(driver.findElement(By.id("#auth_user_name")).getClass());
         //$("#auth_user_name").is(visible);
-        System.out.println(url);
+        System.out.println("logging in . . . .");
 	}
 
 	@Given("^I enter login \"([^\"]*)\" in field having id \"([^\"]*)\"$")
@@ -107,5 +109,8 @@ public class stepDef_prom
                 ExpectedConditions.visibilityOfElementLocated(selection));
 		$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
 	}
-
+	
+	@After
+	protected void CloseDr() 
+	{driver.close();}
 }

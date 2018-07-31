@@ -21,8 +21,8 @@
             	<artifactId>selenium-chrome-driver</artifactId>
             	<version>2.42.2</version>
             </dependency>
-  			<dependency>
-  			    <groupId>com.codeborne</groupId>
+            <dependency>
+    			<groupId>com.codeborne</groupId>
     			<artifactId>selenide</artifactId>
     			<version>4.8</version>
 			</dependency>
@@ -31,10 +31,20 @@
     			<artifactId>cucumber-java8</artifactId>
    				<version>2.3.1</version>
 			</dependency>
+			<!-- <dependency>
+    			<groupId>com.google.guava</groupId>
+    			<artifactId>guava</artifactId>
+    			<version>23.0</version>
+			</dependency>-->
    			<dependency>
     			<groupId>io.cucumber</groupId>
     			<artifactId>cucumber-junit</artifactId>
     			<version>2.3.1</version>
+			</dependency>
+			<dependency>
+  				<groupId>com.google.guava</groupId>
+  				<artifactId>guava</artifactId>
+  				<version>25.1-jre</version>
 			</dependency>
   			<dependency>
   				<groupId>junit</groupId>
@@ -50,29 +60,14 @@
             	<groupId>info.cukes</groupId>
             	<artifactId>cucumber-java</artifactId>
             	<version>1.2.2</version>
-            	<scope>test</scope>
+            	<!-- <scope>test</scope> -->
         	</dependency>
         	<dependency>
     			<groupId>info.cukes</groupId>
     			<artifactId>cucumber-picocontainer</artifactId>
     			<version>1.2.2</version>
-    			<scope>test</scope>
+    			<!-- <scope>test</scope>-->
 			</dependency>
-    		<!-- <dependency>
-        		<groupId>org.apache.httpcomponents</groupId>
-        		<artifactId>httpclient</artifactId>
-        		<version>4.5.3</version>
-    		</dependency>
-    		<dependency>
-        		<groupId>org.apache.httpcomponents</groupId>
-        		<artifactId>httpcore</artifactId>
-        		<version>4.4.6</version>
-    		</dependency>
-    		<dependency>
-    			<groupId>io.github.bonigarcia</groupId>
-    			<artifactId>webdrivermanager</artifactId>
-    			<version>2.2.4</version>
-			</dependency>-->
 		</dependencies>
   	<!-- </dependencyManagement>-->
 </project>
