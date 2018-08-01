@@ -2,7 +2,7 @@
 Feature: Test data existance_prom
   I want to check if there is some data in all the tables
   
-  Scenario: I login with valud creds
+  Scenario: I login with valid creds
     #Given I login as demo with password reptilian with name Иванов О.З.
     Given I navigate to "http://eaist.mos.ru/analytics/index.php"
     And I enter login "demo" in field having id "#auth_user_name"

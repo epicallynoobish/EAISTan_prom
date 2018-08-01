@@ -9,8 +9,12 @@ import org.junit.Assume;
 import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import com.codeborne.selenide.impl.WebDriverThreadLocalContainer;
 
 import com.codeborne.selenide.Selenide;
 
@@ -22,17 +26,22 @@ import env.DriverUtil;
 
 public class stepDef_prom 
 {
+	private static ChromeDriverService options;
+
 	@Before
-	public void SysOptions()
+	public ChromeOptions SysOptions ()
 	{
-		//ChromeOptions options = new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
 		System.setProperty("webdriver.chrome.logfile", "D:\\chromedriver.log");
 		System.setProperty("webdriver.chrome.verboseLogging", "true");
-		//System.setProperty("browser", "chrome");
-		//System.setProperty("headless", "true");
+		System.setProperty("browser", "chrome");
+		System.setProperty("headless", "true");
+		return options;
 	}
 	
 	protected static WebDriver driver = DriverUtil.getDefaultDriver();
+	//protected static WebDriver driver = new ChromeDriver();
+	//static WebDriver driver;
 	//protected static WebDriver driver = new ChromeDriver(options);
 	
 	/*@Given("^I login as demo with password reptilian with name Иванов О\\.З\\.$")
@@ -74,7 +83,7 @@ public class stepDef_prom
         (new WebDriverWait(driver, 60))
         	.until(ExpectedConditions.presenceOfElementLocated(By.id("auth_user_name")));
         System.out.printf("got " + url + System.getProperty("line.separator"));
-        Selenide.refresh();
+        //Selenide.refresh();
         //Assume.assumeFalse($("#auth_user_name").isDisplayed());
         //driver.findElement(By.id("#auth_user_name")).getClass();
         Assume.assumeNotNull(driver.findElement(By.id("#auth_user_name")).getClass());
