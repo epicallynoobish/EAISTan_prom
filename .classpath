@@ -35,7 +35,6 @@
 	<classpathentry kind="lib" path="D:/cucumber-master/cucumber-junit-2.3.1.jar"/>
 	<classpathentry kind="lib" path="D:/cucumber-master/cucumber-jvm-deps-1.0.6.jar"/>
 	<classpathentry kind="lib" path="D:/cucumber-master/cucumber-reporting-3.14.0.jar"/>
-	<classpathentry kind="lib" path="D:/cucumber-master/gherkin-5.0.0.jar"/>
 	<classpathentry kind="lib" path="D:/cucumber-master/junit-1.0.2.jar"/>
 	<classpathentry kind="lib" path="D:/cucumber-master/mockito-all-2.0.2-beta.jar"/>
 	<classpathentry kind="lib" path="D:/eclipse_workspace/Cucumber_EAIST/src/selenide-4.8.jar"/>
@@ -46,5 +45,6 @@
 	<classpathentry kind="lib" path="slf4j-api-1.7.21.jar"/>
 	<classpathentry kind="lib" path="guava.jar"/>
 	<classpathentry kind="lib" path="src/selenide-4.8.jar"/>
+	<classpathentry kind="lib" path="D:/cucumber-master/gherkin-5.0.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

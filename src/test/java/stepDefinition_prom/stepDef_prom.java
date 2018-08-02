@@ -12,11 +12,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
-import com.codeborne.selenide.impl.WebDriverThreadLocalContainer;
-
-import com.codeborne.selenide.Selenide;
 
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
@@ -26,7 +21,7 @@ import env.DriverUtil;
 
 public class stepDef_prom 
 {
-	private static ChromeDriverService options;
+	//private static ChromeDriverService options;
 
 	@Before
 	public ChromeOptions SysOptions ()
