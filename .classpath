@@ -46,5 +46,6 @@
 	<classpathentry kind="lib" path="guava.jar"/>
 	<classpathentry kind="lib" path="src/selenide-4.8.jar"/>
 	<classpathentry kind="lib" path="D:/cucumber-master/gherkin-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_151/lib/tools.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
