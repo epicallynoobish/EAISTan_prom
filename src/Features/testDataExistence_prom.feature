@@ -1,7 +1,6 @@
-@tag
 Feature: Test data existance_prom
   I want to check if there is some data in all the tables
-  
+  @old
   Scenario: I login with valid creds
     #Given I login as demo with password reptilian with name Иванов О.З.
     Given I navigate to "http://eaist.mos.ru/analytics/index.php"
@@ -9,6 +8,15 @@ Feature: Test data existance_prom
     And I enter pass "reptilian" in field having id "#auth_user_password"
     When I clickbutton having class ".enter_btn"
     Then I should get logged in
+    
+    @new
+    Scenario: I log in with new interface
+    Given I open "https://eaist.mos.ru/login-new.html"
+    And Press button with xpath "/html/body/div[2]/div/div[6]/button"
+    When I enter login "" to field having xpath "//*[@id='ngdialog1']/div[2]/div/div[2]/div/div/div[1]/div[1]/input"
+    And I enter password "" to field having xpath "//*[@id='ngdialog1']/div[2]/div/div[2]/div/div/div[1]/div[2]/input"
+    And I press button "//*[@id='ngdialog1']/div[2]/div/div[2]/div/div/div[3]/div[2]/button"
+    Then I should be login to analitics
 
   #Scenario: I test data existence
    # When I go to <table>

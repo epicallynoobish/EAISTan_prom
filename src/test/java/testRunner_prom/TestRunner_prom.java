@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		glue = "stepDefinition_prom",
 		//dryRun=true,
 		features =  "src/Features"
-		//,tags ={"~@ignore", “@teamcity”}
+		,tags ={"@new"}
 		,monochrome=true
 		)
 

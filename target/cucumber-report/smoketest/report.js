@@ -2,12 +2,7 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "name": "Test data existance_prom",
   "description": "  I want to check if there is some data in all the tables",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@tag"
-    }
-  ]
+  "keyword": "Feature"
 });
 formatter.scenario({
   "name": "I login with valid creds",
@@ -15,7 +10,7 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@tag"
+      "name": "@old"
     }
   ]
 });
@@ -27,7 +22,7 @@ formatter.match({
   "location": "stepDef_prom.i_navigate(String)"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"id\",\"selector\":\"#auth_user_name\"}\n  (Session info: chrome\u003d68.0.3440.106)\n  (Driver info: chromedriver\u003d2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform\u003dWindows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.8.1\u0027, revision: \u00276e95a6684b\u0027, time: \u00272017-12-01T19:05:32.194Z\u0027\nSystem info: host: \u0027PRM-WS-0159\u0027, ip: \u0027172.18.8.130\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_151\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.35.528161 (5b82f2d2aae0ca..., userDataDir: C:\\Users\\starikov\\AppData\\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}\nSession ID: 30286d72e1fea0bbcd88ef5fe42af9c0\n*** Element info: {Using\u003did, value\u003d#auth_user_name}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\r\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\r\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:218)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)\r\n\tat stepDefinition_prom.stepDef_prom.i_navigate(stepDef_prom.java:84)\r\n\tat ✽.I navigate to \"http://eaist.mos.ru/analytics/index.php\"(src/Features/testDataExistence_prom.feature:7)\r\n",
+  "error_message": "java.lang.NoSuchMethodError: org.openqa.selenium.support.ui.WebDriverWait.until(Ljava/util/function/Function;)Ljava/lang/Object;\r\n\tat stepDefinition_prom.stepDef_prom.i_navigate(stepDef_prom.java:79)\r\n\tat ✽.I navigate to \"http://eaist.mos.ru/analytics/index.php\"(src/Features/testDataExistence_prom.feature:6)\r\n",
   "status": "failed"
 });
 formatter.step({
@@ -66,6 +61,77 @@ formatter.step({
 });
 formatter.match({
   "location": "stepDef_prom.should_logged_in()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
+  "name": "I log in with new interface",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@new"
+    }
+  ]
+});
+formatter.step({
+  "name": "I open \"https://eaist.mos.ru/login-new.html\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepDef_prom.i_open(String)"
+});
+formatter.result({
+  "error_message": "java.lang.NoSuchMethodError: org.openqa.selenium.support.ui.WebDriverWait.until(Ljava/util/function/Function;)Ljava/lang/Object;\r\n\tat stepDefinition_prom.stepDef_prom.i_open(stepDef_prom.java:127)\r\n\tat ✽.I open \"https://eaist.mos.ru/login-new.html\"(src/Features/testDataExistence_prom.feature:14)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "Press button with xpath \"/html/body/div[2]/div/div[6]/button\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDef_prom.press_btn_xpath(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I enter login \"\" to field having xpath \"//*[@id\u003d\u0027ngdialog1\u0027]/div[2]/div/div[2]/div/div/div[1]/div[1]/input\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepDef_prom.enter_login(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I enter password \"\" to field having xpath \"//*[@id\u003d\u0027ngdialog1\u0027]/div[2]/div/div[2]/div/div/div[1]/div[2]/input\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDef_prom.enter_pass(String,String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I press button \"//*[@id\u003d\u0027ngdialog1\u0027]/div[2]/div/div[2]/div/div/div[3]/div[2]/button\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDef_prom.i_press(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I should be login to analitics",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDef_prom.i_shold_be_login()"
 });
 formatter.result({
   "status": "skipped"

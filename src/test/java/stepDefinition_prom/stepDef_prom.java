@@ -114,6 +114,55 @@ public class stepDef_prom
 		$(".c_header").$(".user-name").shouldHave(text("Иванов О.З."));
 	}
 	
+	
+	@Given("^I open \"([^\"]*)\"$")
+	public static void i_open (String url)
+	{
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		System.out.printf("opening " + url + System.getProperty("line.separator"));
+		driver.get(url);
+		
+		(new WebDriverWait(driver, 60))
+    		.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='ngdialog1']/div[2]/div/div[2]/div/div/div[1]/div[1]/input")));
+		System.out.printf("got " + url + System.getProperty("line.separator"));
+		Assume.assumeTrue(driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/button")).isEnabled());
+	}
+	
+	@Given("^Press button with xpath \"([^\"]*)\"$")
+	public static void press_btn_xpath (String button)
+	{
+	    $(button).click();
+	    Assume.assumeTrue(driver.findElement(By.xpath("//*[@id='ngdialog1']/div[2]/div/div[2]/div/div/div[1]/div[1]/input")).isEnabled());
+	}
+
+	@When("^I enter login \"([^\"]*)\" to field having xpath \"([^\"]*)\"$")
+	public static void enter_login (String login, String login_field)
+	{
+		$(login_field).sendKeys(login);
+	}
+
+	@When("^I enter password \"([^\"]*)\" to field having xpath \"([^\"]*)\"$")
+	public static void enter_pass (String pass, String pass_field)
+	{
+		$(pass_field).sendKeys(pass);
+	}
+
+	@When("^I press button \"([^\"]*)\"$")
+	public static void i_press(String loginButton)
+	{
+	    $(loginButton).click();
+	    Assume.assumeTrue(driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[2]/div[2]/button")).isEnabled());
+	}
+
+	@Then("^I should be login to analitics$")
+	public static void i_shold_be_login()
+	{
+	    driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[2]/div[2]/button")).click();
+	    Assume.assumeTrue(driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[2]/div[2]/div/div[4]/a")).isEnabled());
+	    driver.findElement(By.xpath("/html/body/div[4]/div[2]/div/div[2]/div[2]/div/div[4]/a")).click();
+	}
+	
 	@After
 	protected void CloseDr() 
 	{driver.close();}
